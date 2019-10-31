@@ -5,7 +5,6 @@ import { AdministradorService } from '../administrador.service';
 import { Administrador } from '../administrador';
 import { AdministradorDetail } from '../administrador-detail';
 
-
 @Component({
   selector: 'app-administrador-detail',
   templateUrl: './administrador-detail.component.html',
