@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="col">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Calificacion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let e of calificaciones">
+          <td>{{e.puntaje}}</td>
+          <td>{{e.descripcion}}</td>
+          <td>{{e.fecha}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
