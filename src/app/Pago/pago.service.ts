@@ -5,7 +5,7 @@ import { Observable } from "rxjs";
 
 
 //Esto lo que hace es tomar los json de la ruta y mostrarlos en lista, y debe funcionar porque asi estaba en postman 
-const API_URL = "http://{{ip}}:{{puerto}}/s2_enforma-api/api/";
+const API_URL = "http://localhost:8080/s2_enforma-api/api/";
 
 const pagos = "pagos";
 

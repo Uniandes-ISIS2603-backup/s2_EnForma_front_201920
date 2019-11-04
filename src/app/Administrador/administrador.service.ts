@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { AdministradorDetail } from './administrador-detail';
 
 
-const API_URL = "http://{{ip}}:{{puerto}}/s2_enforma-api/api/";
+const API_URL = "http://localhost:8080/s2_enforma-api/api/";
 
 const administradores = 'administradores';
 
