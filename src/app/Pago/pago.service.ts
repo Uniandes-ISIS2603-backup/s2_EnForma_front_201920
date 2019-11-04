@@ -3,9 +3,11 @@ import { HttpClient } from "@angular/common/http";
 import { Pago } from "./pago";
 import { Observable } from "rxjs";
 
-const API_URL = "../../assets/";
 
-const pagos = "pagos.json";
+//Esto lo que hace es tomar los json de la ruta y mostrarlos en lista, y debe funcionar porque asi estaba en postman 
+const API_URL = "http://{{ip}}:{{puerto}}/s2_enforma-api/api/";
+
+const pagos = "pagos";
 
 @Injectable()
 export class PagoService {

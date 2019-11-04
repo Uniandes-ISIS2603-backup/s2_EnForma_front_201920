@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
 import { AdministradorDetail } from './administrador-detail';
 
 
-const API_URL = "../../assets/";
+const API_URL = "http://{{ip}}:{{puerto}}/s2_enforma-api/api/";
 
-const administradores = 'administradores.json';
+const administradores = 'administradores';
 
 @Injectable()
 export class AdministradorService {
