@@ -5,9 +5,7 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
-import { AdministradorListComponent } from '../Administrador/administrador-list/administrador-list.component';
-import { AdministradorDetailComponent } from '../Administrador/administrador-detail/administrador-detail.component';
-import { PagoListComponent } from '../Pago/pago-list/pago-list.component';
+
 
 const routes: Routes = [
 
@@ -44,27 +42,8 @@ const routes: Routes = [
         path: '**',
         redirectTo: 'home',
     },
-    {
-        path: 'administradores',
-        children: [{
-            path: 'list',
-            component: AdministradorListComponent
-          },
-          {
-            path: ':id',
-            component: AdministradorDetailComponent,
-            outlet: 'detail'
-          }
-          ]
-    },
-    {
-        path: 'pagos',
-        children: [{
-            path: 'list',
-            component: PagoListComponent
-          }
-          ]
-    }
+    
+    
 ];
 
 @NgModule({

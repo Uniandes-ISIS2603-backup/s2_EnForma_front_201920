@@ -15,8 +15,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
 import {CalificacionModule} from './calificacion/calificacion.module';
-import {AdministradorModule} from './administrador/administrador.module';
-import {PagoModule} from './pago/pago.module';
+
 
 
 
@@ -43,8 +42,7 @@ import {PagoModule} from './pago/pago.module';
         NgxPermissionsModule.forRoot(),
         NgbModule,
         CalificacionModule,
-        AdministradorModule,
-        PagoModule
+
     ],
     bootstrap: [AppComponent],
     providers: [
