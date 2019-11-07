@@ -19,6 +19,7 @@ import {CalificacionModule} from './calificacion/calificacion.module';
 import {AdministradorModule} from './administrador/administrador.module';
 import {PagoModule} from './pago/pago.module';
 import {DietasModule} from './dietas/dietas.module';
+import {ComidatipoModule} from './comidatipo/comidatipo.module';
 
 
 
@@ -48,7 +49,8 @@ import {DietasModule} from './dietas/dietas.module';
         CalificacionModule,
         AdministradorModule,
         PagoModule,
-        DietasModule
+        DietasModule,
+        ComidatipoModule
 
     ],
     bootstrap: [AppComponent],

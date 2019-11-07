@@ -10,6 +10,7 @@ import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component
 import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
 import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
+import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
 
 
 
@@ -48,6 +49,18 @@ const routes: Routes = [
             
         ]
     },
+
+    {
+        path: 'comidas',
+        children: [
+            {
+                path: 'list',
+                component: ComidatipoListComponent
+            }
+            
+        ]
+    },
+    
     
     {
         path: 'auth',
