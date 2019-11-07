@@ -1,0 +1,50 @@
+<p>
+calificacion-create works!
+</p>
+<form [formGroup]="calificacionForm" (ngSubmit)="createCalificacion(calificacionForm.value)">
+
+  <div class="form-group row">
+			<label class="col-sm-1 font-weight-bold" for="puntaje">
+        Puntaje:
+       </label>
+       <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=1>
+       <label class="form-check-label" for="puntaje">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=2>
+        <label class="form-check-label" for="puntaje">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=3>
+        <label class="form-check-label" for="puntaje">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=4>
+        <label class="form-check-label" for="puntaje">4</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=5>
+        <label class="form-check-label" for="puntaje">5</label>
+      </div>
+			
+      <div class="alert alert-danger alert-dismissible fade show"
+			*ngIf="calificacionForm.get('puntaje').hasError('required') && calificacionForm.get('puntaje').touched">
+			Puntaje requerido
+		  </div>
+  </div>
+  <div class="form-group">
+			<label class="font-weight-bold" for="comentario">
+        Comentario:
+       </label>
+			<textarea id="comentario" type="text" class="form-control" name="comentario" rows="3" placeholder="Comentarios"></textarea>
+  </div>
+  <div class="form-group ">
+    <label class="font-weight-bold" for="fecha">
+        Fecha:
+       </label>
+    <label for="fecha" class="sr-only">Fecha</label>
+    <input type="text" readonly class="form-control-plaintext" id="fecha " formControlName = "fecha" value={{myDate}}>
+  </div>
+  <button class="button" type="submit" [disabled]="calificacionForm.invalid">Create</button>
+</form>
