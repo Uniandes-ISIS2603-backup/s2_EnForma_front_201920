@@ -16,6 +16,8 @@ import {CalificacionDetailComponent} from '../calificacion/calificacion-detail/c
 import { CalificacionCreateComponent } from '../calificacion/calificacion-create/calificacion-create.component';
 import { DomicilioListComponent } from '../domicilio/domicilio-list/domicilio-list.component';
 import { DomicilioCreateComponent } from '../domicilio/domicilio-create/domicilio-create.component';
+import { ClienteCreateComponent } from '../cliente/cliente-create/cliente-create.component';
+import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
 
 CalificacionCreateComponent
 
@@ -103,6 +105,20 @@ const routes: Routes = [
         ]
     },
     
+    {
+        path: 'cliente',
+        children: [
+            {
+                path: 'create',
+                component: ClienteCreateComponent
+            },
+            {
+                path: 'list',
+                component: ClienteListComponent
+            }
+            
+        ]
+    },
     
     {
         path: 'auth',

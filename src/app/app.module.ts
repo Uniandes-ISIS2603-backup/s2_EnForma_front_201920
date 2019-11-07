@@ -21,6 +21,7 @@ import {DietasModule} from './dietas/dietas.module';
 import {ComidatipoModule} from './comidatipo/comidatipo.module';
 import {CalificacionModule} from './calificacion/calificacion.module';
 import {DomicilioModule} from './domicilio/domicilio.module';
+import {ClienteModule} from './cliente/cliente.module';
 
 
 
@@ -51,7 +52,7 @@ import {DomicilioModule} from './domicilio/domicilio.module';
         DietasModule,
         ComidatipoModule,
         CalificacionModule,
-        DomicilioModule
+        DomicilioModule, ClienteModule
 
     ],
     bootstrap: [AppComponent],
