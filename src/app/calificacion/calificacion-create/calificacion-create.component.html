@@ -1,0 +1,52 @@
+<form [formGroup]="calificacionForm" (ngSubmit)="createCalificacion(calificacionForm.value)">
+
+  <div class="form-group row">
+			<label class="col-sm-1 font-weight-bold" for="puntaje">
+        Puntaje:
+       </label>
+       <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=1>
+       <label class="form-check-label" for="puntaje">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=2>
+        <label class="form-check-label" for="puntaje">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=3>
+        <label class="form-check-label" for="puntaje">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=4>
+        <label class="form-check-label" for="puntaje">4</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="puntaje" id="puntaje" value=5>
+        <label class="form-check-label" for="puntaje">5</label>
+      </div>
+			
+      <!-- <div class="alert alert-danger alert-dismissible fade show"
+			*ngIf="calificacionForm.get('puntaje').hasError('required') && calificacionForm.get('puntaje').touched">
+			Puntaje requerido
+		  </div> -->
+  </div>
+  <div class="form-group">
+			<label class="font-weight-bold" for="comentario">
+        Comentario:
+       </label>
+			<input novalidate id="comentario" class="form-control" formControlName="comentario"  placeholder="Comentarios">
+  </div>
+  <div class="form-group ">
+    <label class="font-weight-bold" for="fecha">
+        Fecha:
+    </label>
+    <!-- <label for="fecha" class="sr-only">Fecha</label> -->
+    <!-- <input type="text" readonly class="form-control-plaintext" id="fecha " formControlName = "fecha" value={{myDate}}> -->
+    <input novalidate type="datetime"  id="fecha" class="form-control" formControlName="fecha" placeholder="Fecha actual con el formato dd/MM/yyyy HH:mm:ss">
+    <!-- <div class="alert alert-danger alert-dismissible fade show"
+			*ngIf="calificacionForm.get('fecha').hasError('required') && editorialForm.get('fecha').touched">
+			Fecha requerida
+		</div> -->
+  </div>
+  <button class="button" type="submit" >Create</button>
+</form>

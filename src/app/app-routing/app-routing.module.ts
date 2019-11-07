@@ -11,7 +11,15 @@ import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
 import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
+import { CalificacionListComponent } from '../calificacion/calificacion-list/calificacion-list.component';
+import {CalificacionDetailComponent} from '../calificacion/calificacion-detail/calificacion-detail.component';
+import { CalificacionCreateComponent } from '../calificacion/calificacion-create/calificacion-create.component';
+import { DomicilioListComponent } from '../domicilio/domicilio-list/domicilio-list.component';
+import { DomicilioCreateComponent } from '../domicilio/domicilio-create/domicilio-create.component';
+import { ClienteCreateComponent } from '../cliente/cliente-create/cliente-create.component';
+import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
 
+CalificacionCreateComponent
 
 
 const routes: Routes = [
@@ -31,6 +39,7 @@ const routes: Routes = [
     {
         path: 'administrador',
         children: [
+            
             {
                 path: 'list',
                 component: AdministradorListComponent
@@ -60,7 +69,56 @@ const routes: Routes = [
             
         ]
     },
+
+    {
+        path: 'calificacion',
+        children: [
+            {
+                path: 'list',
+                component: CalificacionListComponent
+            },
+            {
+                path: ':id', 
+                component: CalificacionDetailComponent,
+                outlet: 'detail'
+            },
+            {
+                path: 'create',
+                component:CalificacionCreateComponent
+            }
+            
+        ]
+    },
+
+    {
+        path: 'domicilio',
+        children: [
+            {
+                path: 'create',
+                component: DomicilioCreateComponent
+            },
+            {
+                path: 'list',
+                component: DomicilioListComponent
+            }
+            
+        ]
+    },
     
+    {
+        path: 'cliente',
+        children: [
+            {
+                path: 'create',
+                component: ClienteCreateComponent
+            },
+            {
+                path: 'list',
+                component: ClienteListComponent
+            }
+            
+        ]
+    },
     
     {
         path: 'auth',

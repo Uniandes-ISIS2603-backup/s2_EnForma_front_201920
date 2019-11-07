@@ -1,0 +1,19 @@
+<div class="container-fluid">
+
+
+  <div class='row'>
+
+  <div class='col'>
+          <div class="card" style="width: 18rem;" *ngFor = "let c of clientes">
+        
+          <div class="card-body">
+          <h5 class="card-title" >{{c.nombre}}</h5>
+             <p class="card-text">Id: {{c.id}}</p>
+            <p class="card-text">Username: {{c.userName}}</p>
+          	<a class="btn btn-primary" [routerLink] ="['/clientes', { outlets: { 'detail': [c.id] } }]">Ver detalle</a>
+        </div>
+        </div>
+      </div>
+</div>
+
+</div>

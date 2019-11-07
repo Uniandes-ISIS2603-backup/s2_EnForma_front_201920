@@ -19,7 +19,9 @@ import {AdministradorModule} from './administrador/administrador.module';
 import {PagoModule} from './pago/pago.module';
 import {DietasModule} from './dietas/dietas.module';
 import {ComidatipoModule} from './comidatipo/comidatipo.module';
-
+import {CalificacionModule} from './calificacion/calificacion.module';
+import {DomicilioModule} from './domicilio/domicilio.module';
+import {ClienteModule} from './cliente/cliente.module';
 
 
 
@@ -48,7 +50,9 @@ import {ComidatipoModule} from './comidatipo/comidatipo.module';
         AdministradorModule,
         PagoModule,
         DietasModule,
-        ComidatipoModule
+        ComidatipoModule,
+        CalificacionModule,
+        DomicilioModule, ClienteModule
 
     ],
     bootstrap: [AppComponent],

@@ -1,0 +1,42 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col">
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th>Domicilio id</th>
+            <th>fecha</th>
+            <th>Lugar de entrega</th>
+            <th>Costo</th>
+            <th>cliente</th>
+            <th>comida</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let i of domicilios">
+						<td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(i.id)">{{i.id}}</a>
+						</td>
+            <td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(i.fecha)">{{i.fecha}}</a>
+						</td>
+            <td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(i.lugarEntrega)">{{i.lugarEntrega}}</a>
+						</td>
+            <td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(i.costo)">{{i.costo}}</a>
+						</td>
+            <td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(i.cliente)">{{i.cliente}}</a>
+						</td>
+            <td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(i.comidaTipo)">{{i.comidaTipo}}</a>
+						</td>
+            
+
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
