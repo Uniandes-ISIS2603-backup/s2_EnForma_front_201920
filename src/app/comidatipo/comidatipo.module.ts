@@ -6,6 +6,8 @@ import { ComidatipoService } from './comidatipo.service';
 // import { ComidatipoCreateComponent } from './comidatipo-create/comidatipo-create.component';
 import {AppRoutingModule} from '../app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ComidatipoDetailComponent } from './comidatipo-detail/comidatipo-detail.component';
+import { ComidatipoCreateComponent } from './comidatipo-create/comidatipo-create.component';
 
 
 
@@ -15,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     AppRoutingModule
   ],
-  declarations: [ComidatipoListComponent], 
+  declarations: [ComidatipoListComponent, ComidatipoDetailComponent, ComidatipoCreateComponent], 
   
   exports : [ComidatipoListComponent], 
   providers: [ComidatipoService]

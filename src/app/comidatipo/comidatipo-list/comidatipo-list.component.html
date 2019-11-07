@@ -10,8 +10,9 @@
 			</thead>
 			<tbody>
 				<tr *ngFor="let c of comidas">
-	  <td > {{c.nombre}} </td>
-    <td> {{c.momentoDelDia}}</td>
+	  <td style="cursor: pointer;"> 
+      <a class="figure-caption" routerLink ="/comidas/{{c.id}}">	{{c.nombre}} </a> </td>
+    <td> {{c.momento}}</td>
     <td> {{c.calorias}}</td> 
 
 
@@ -20,3 +21,5 @@
 		</table>
 	</div>
 </div>
+
+<!-- [routerLink] ="'/comidas', { outlets : 'detail': [c.id] } }" -->
