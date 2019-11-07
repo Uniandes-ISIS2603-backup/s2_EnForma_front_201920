@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="col-md-2">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Id
+          <th>Dieta Nombre</th>
+          <th>Calorias Mínimas</th>
+          <th>Calorias Maximas</th>
+          <th>Cantidad de Azucar</th>
+          <th>Cantidad de Fibra</th>
+          <th>Cantidad de Grasa</th>
+          <th>¿Contiene Gluten?</th>
+          <th>¿Contiene Lactosa?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let d of dietas">
+           <td>{{d.id}}</td>
+           <td>{{d.nombre}}</td>
+           <td>{{d.caloriasMin}}</td>
+           <td>{{d.caloriasMax}}</td>
+           <td>{{d.cantidadAzucar}}</td>
+           <td>{{d.cantidadFibra}}</td>
+           <td>{{d.cantidadGrasa}}</td>
+           <td>{{d.tieneGluten}}</td>
+           <td>{{d.tieneLactosa}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
