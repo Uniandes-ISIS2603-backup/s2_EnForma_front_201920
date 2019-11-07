@@ -1,6 +1,3 @@
-<p>
-calificacion-create works!
-</p>
 <form [formGroup]="calificacionForm" (ngSubmit)="createCalificacion(calificacionForm.value)">
 
   <div class="form-group row">
@@ -28,23 +25,28 @@ calificacion-create works!
         <label class="form-check-label" for="puntaje">5</label>
       </div>
 			
-      <div class="alert alert-danger alert-dismissible fade show"
+      <!-- <div class="alert alert-danger alert-dismissible fade show"
 			*ngIf="calificacionForm.get('puntaje').hasError('required') && calificacionForm.get('puntaje').touched">
 			Puntaje requerido
-		  </div>
+		  </div> -->
   </div>
   <div class="form-group">
 			<label class="font-weight-bold" for="comentario">
         Comentario:
        </label>
-			<textarea id="comentario" type="text" class="form-control" name="comentario" rows="3" placeholder="Comentarios"></textarea>
+			<input novalidate id="comentario" class="form-control" formControlName="comentario"  placeholder="Comentarios">
   </div>
   <div class="form-group ">
     <label class="font-weight-bold" for="fecha">
         Fecha:
-       </label>
-    <label for="fecha" class="sr-only">Fecha</label>
-    <input type="text" readonly class="form-control-plaintext" id="fecha " formControlName = "fecha" value={{myDate}}>
+    </label>
+    <!-- <label for="fecha" class="sr-only">Fecha</label> -->
+    <!-- <input type="text" readonly class="form-control-plaintext" id="fecha " formControlName = "fecha" value={{myDate}}> -->
+    <input novalidate type="datetime"  id="fecha" class="form-control" formControlName="fecha" placeholder="Fecha actual con el formato dd/MM/yyyy HH:mm:ss">
+    <!-- <div class="alert alert-danger alert-dismissible fade show"
+			*ngIf="calificacionForm.get('fecha').hasError('required') && editorialForm.get('fecha').touched">
+			Fecha requerida
+		</div> -->
   </div>
-  <button class="button" type="submit" [disabled]="calificacionForm.invalid">Create</button>
+  <button class="button" type="submit" >Create</button>
 </form>

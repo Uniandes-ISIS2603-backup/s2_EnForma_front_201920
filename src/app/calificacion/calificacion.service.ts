@@ -18,7 +18,11 @@ export class CalificacionService {
 
   getCalificacionDetail(calificacionId): Observable<Calificacion>
   {
-    return this.http.get<Calificacion>(API_URL + calificaciones + calificacionId)
+    return this.http.get<Calificacion>(API_URL + calificaciones + "/" +calificacionId)
+  }
+
+  createCalificacion(calificacion: Calificacion): Observable<Calificacion> {
+    return this.http.post<Calificacion>(API_URL + calificaciones, calificacion);
   }
 
 }

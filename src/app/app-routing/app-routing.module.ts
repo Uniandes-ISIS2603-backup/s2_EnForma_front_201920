@@ -12,6 +12,7 @@ import { AdministradorListComponent } from '../administrador/administrador-list/
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
 import { CalificacionListComponent } from '../calificacion/calificacion-list/calificacion-list.component';
+import {CalificacionDetailComponent} from '../calificacion/calificacion-detail/calificacion-detail.component';
 import { CalificacionCreateComponent } from '../calificacion/calificacion-create/calificacion-create.component';
 import { DomicilioListComponent } from '../domicilio/domicilio-list/domicilio-list.component';
 import { DomicilioCreateComponent } from '../domicilio/domicilio-create/domicilio-create.component';
@@ -73,6 +74,11 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: CalificacionListComponent
+            },
+            {
+                path: ':id', 
+                component: CalificacionDetailComponent,
+                outlet: 'detail'
             },
             {
                 path: 'create',
