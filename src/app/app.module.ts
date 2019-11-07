@@ -20,7 +20,7 @@ import {PagoModule} from './pago/pago.module';
 import {DietasModule} from './dietas/dietas.module';
 import {ComidatipoModule} from './comidatipo/comidatipo.module';
 import {CalificacionModule} from './calificacion/calificacion.module';
-
+import {DomicilioModule} from './domicilio/domicilio.module';
 
 
 
@@ -50,7 +50,8 @@ import {CalificacionModule} from './calificacion/calificacion.module';
         PagoModule,
         DietasModule,
         ComidatipoModule,
-        CalificacionModule
+        CalificacionModule,
+        DomicilioModule
 
     ],
     bootstrap: [AppComponent],
