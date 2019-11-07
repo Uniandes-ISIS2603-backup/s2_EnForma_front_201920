@@ -11,6 +11,7 @@ import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
 import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
+import { CalificacionListComponent } from '../calificacion/calificacion-list/calificacion-list.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
     {
         path: 'administrador',
         children: [
+            
             {
                 path: 'list',
                 component: AdministradorListComponent
@@ -56,6 +58,17 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: ComidatipoListComponent
+            }
+            
+        ]
+    },
+
+    {
+        path: 'calificacion',
+        children: [
+            {
+                path: 'list',
+                component: CalificacionListComponent
             }
             
         ]

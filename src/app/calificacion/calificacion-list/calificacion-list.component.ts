@@ -27,7 +27,7 @@ export class CalificacionListComponent implements OnInit
 
   onSelected(calificacionId: number): void {
     this.calificacionId = calificacionId;
-    this.calificacionSelected = new Calificacion();
+    this.calificacionSelected = new Calificacion;
     this.calificacionService.getCalificacionDetail(calificacionId).subscribe(c => this.calificacionSelected = c);
   }
 

@@ -15,7 +15,7 @@ export class CalificacionCreateComponent implements OnInit
 {
 
   calificacionForm: FormGroup;
-  myDate = new Date();
+  myDate:String;
   
 
   constructor(private calificacionService: CalificacionService,

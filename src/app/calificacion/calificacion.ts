@@ -1,8 +1,10 @@
-export interface Calificacion 
+import { Dieta } from '../dietas/dieta';
+
+
+export class Calificacion 
 {
   puntaje: number;
   comentario: string;
   fecha: Date;
-  cliente: Cliente;
   dieta: Dieta;
 }
