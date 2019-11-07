@@ -15,7 +15,6 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
 
-import {CalificacionModule} from './calificacion/calificacion.module';
 import {AdministradorModule} from './administrador/administrador.module';
 import {PagoModule} from './pago/pago.module';
 import {DietasModule} from './dietas/dietas.module';
@@ -46,7 +45,6 @@ import {ComidatipoModule} from './comidatipo/comidatipo.module';
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
         NgbModule,
-        CalificacionModule,
         AdministradorModule,
         PagoModule,
         DietasModule,
