@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<div class="col-md-2">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>nombre</th>
+					<th>momento del dia</th>
+					<th>calorias</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let c of comidas">
+	  <td > {{c.nombre}} </td>
+    <td> {{c.momento}}</td>
+    <td> {{c.calorias}}</td> 
+
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
