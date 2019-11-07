@@ -1,0 +1,18 @@
+<div class="container-fluid">
+
+  <div class='row'>
+
+  <div *ngFor = "let a of Pagoes" class='col'>
+          <div class="card" style="width: 18rem;" >
+          <img src="https://avatarfiles.alphacoders.com/498/4989.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+          <h5 class="card-title" >{{a.id}}</h5>
+             <p class="card-text">Estado: {{a.estadoPago}}</p>
+            <p class="card-text">Prepago: {{a.esPrepago}}</p>
+            <p class="card-text">Monto: {{a.monto}}</p>
+        </div>
+        </div>
+      </div>
+</div>
+
+</div>

@@ -16,6 +16,10 @@ import {AuthModule} from './auth/auth.module';
 
 import {CalificacionModule} from './calificacion/calificacion.module';
 
+import {AdministradorModule} from './administrador/administrador.module';
+
+import {PagoModule} from './pago/pago.module';
+
 
 
 
@@ -42,6 +46,8 @@ import {CalificacionModule} from './calificacion/calificacion.module';
         NgxPermissionsModule.forRoot(),
         NgbModule,
         CalificacionModule,
+        AdministradorModule,
+        PagoModule
 
     ],
     bootstrap: [AppComponent],
