@@ -7,9 +7,49 @@ import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 
 
+import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
+import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
+import { PagoListComponent } from '../pago/pago-list/pago-list.component';
+
+
+
 const routes: Routes = [
 
-     {
+     
+    {
+        path: 'dietas',
+        children: [
+            {
+                path: 'list',
+                component: DietasListComponent
+            }
+            
+        ]
+    },
+
+    {
+        path: 'administrador',
+        children: [
+            {
+                path: 'list',
+                component: AdministradorListComponent
+            }
+            
+        ]
+    },
+
+    {
+        path: 'pago',
+        children: [
+            {
+                path: 'list',
+                component: PagoListComponent
+            }
+            
+        ]
+    },
+    
+    {
         path: 'auth',
         children: [
             {
@@ -32,6 +72,8 @@ const routes: Routes = [
                     }
                 }
             }
+
+            
         ]
     },
     {
@@ -42,6 +84,8 @@ const routes: Routes = [
         path: '**',
         redirectTo: 'home',
     },
+
+    
     
     
 ];

@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DietasListComponent } from './dietas-list/dietas-list.component';
 import { DietaService } from './dieta.service';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   declarations: [DietasListComponent],
   exports: [DietasListComponent],
