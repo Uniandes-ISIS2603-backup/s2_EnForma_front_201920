@@ -20,7 +20,8 @@ export class ComidatipoService {
 
   getComidasDetail(comidaId): Observable<ComidaDetail> {
     return this.http.get<ComidaDetail>(
-      API_URL + "comida/" + comidaId 
-    );
-  }
+      API_URL + "comidas/" + comidaId 
+    );  }
+
+    
 }

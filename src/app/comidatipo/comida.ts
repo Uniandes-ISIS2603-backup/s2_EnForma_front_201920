@@ -1,8 +1,10 @@
 export class ComidaTipo {
 
   id: number;
-  momento : string;
+  momentoDelDia : string;
   calorias: number;
   nombre : string;
+  menu: string;
+  imagenComida: string;
 
 }
