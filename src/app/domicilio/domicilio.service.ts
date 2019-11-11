@@ -24,7 +24,7 @@ export class DomicilioService {
   getDomicilioDetail(domicilioId): Observable<DomicilioDetail> 
   {
     console.log(domicilioId+" "+API_URL + "domicilio-" + domicilioId+".json");
-    return this.http.get<DomicilioDetail>(API_URL + "domicilio" +'/'+ domicilioId);
+    return this.http.get<DomicilioDetail>(API_URL + domicilios +'/'+ domicilioId);
   }
 
   createDomicilio(domicilio: Domicilio): Observable<Domicilio> 

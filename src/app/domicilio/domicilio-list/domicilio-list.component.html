@@ -15,7 +15,7 @@
 				<tbody>
 					<tr *ngFor="let i of domicilios">
 						<td style="cursor: pointer;">
-							<a class="figure-caption" [routerLink] ="['/domicilios', { outlets: { 'right': [i.id] } }]" >{{i.id}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.id}}</a>
 						</td>
             <td style="cursor: pointer;">
 							<a class="figure-caption" [routerLink] ="['/domicilios', { outlets: { 'right': [i.fecha] } }]">{{i.fecha}}</a>
@@ -38,5 +38,11 @@
 				</tbody>
 			</table>
 		</div>
+		<div class='col'>
+			<div *ngIf="selectedDomicilio">
+				<app-domicilio-detail [domicilioDetail]="selectedDomicilio"></app-domicilio-detail>
+	  
+		</div>
+	</div>
 	</div>
 </div>
