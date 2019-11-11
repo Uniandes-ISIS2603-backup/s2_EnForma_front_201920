@@ -29,7 +29,8 @@ export class ClienteService {
 
     createCliente(cliente: Cliente): Observable<Cliente>
      {
-    return this.http.post<Cliente>("api/clientes", cliente, this.httpOptions).pipe(tap((cliente: Cliente) => console.log(`added client w/ ${cliente.nombre} id=${cliente.id}`)));
+      return this.http.post<Cliente>(API_URL + clientes, cliente);
+   // return this.http.post<Cliente>("s2_enforma-api/api/clientes", cliente, this.httpOptions).pipe(tap((cliente: Cliente) => console.log(`added client w/ ${cliente.nombre} id=${cliente.id}`)));
   }
 
 }
