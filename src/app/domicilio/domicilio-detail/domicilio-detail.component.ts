@@ -21,7 +21,7 @@ export class DomicilioDetailComponent implements OnInit {
   /**
   * The domicilio whose details we want to show
   */
-  @Input() domicilioDetail: DomicilioDetail;
+  domicilioDetail: DomicilioDetail;
 
 
 

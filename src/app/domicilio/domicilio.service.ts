@@ -12,22 +12,23 @@ export class DomicilioService {
 
   constructor(private http: HttpClient) { }
 
-    getDomicilios() : Observable<Domicilio[]> 
-    {
-        return this.http.get<Domicilio[]>(API_URL + domicilios);
-    }
+  getDomicilios() : Observable<Domicilio[]> 
+  {
+    return this.http.get<Domicilio[]>(API_URL + domicilios);
+  }
 
     /**
     * Returns the Observable object containing the domicilio retrieved from the API
     * @returns The domicilio
     */
-    getDomicilioDetail(domicilioId): Observable<DomicilioDetail> 
-    {
-      console.log(domicilioId+" "+API_URL + "domicilio-" + domicilioId+".json");
-        return this.http.get<DomicilioDetail>(API_URL + "domicilio-" + domicilioId+".json");
-    }
+  getDomicilioDetail(domicilioId): Observable<DomicilioDetail> 
+  {
+    console.log(domicilioId+" "+API_URL + "domicilio-" + domicilioId+".json");
+    return this.http.get<DomicilioDetail>(API_URL + "domicilio" +'/'+ domicilioId);
+  }
 
-  createDomicilio(domicilio: Domicilio): Observable<Domicilio> {
+  createDomicilio(domicilio: Domicilio): Observable<Domicilio> 
+  {
     return this.http.post<Domicilio>(API_URL + domicilios, domicilio);
   }
 
