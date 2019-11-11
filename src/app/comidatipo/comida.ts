@@ -4,7 +4,6 @@ export class ComidaTipo {
   momentoDelDia : string;
   calorias: number;
   nombre : string;
-  menu: string;
-  imagenComida: string;
+
 
 }
