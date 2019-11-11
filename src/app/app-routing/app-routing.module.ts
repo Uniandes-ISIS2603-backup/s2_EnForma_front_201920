@@ -11,6 +11,7 @@ import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
 import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
+import { ComidatipoDetailComponent } from '../comidatipo/comidatipo-detail/comidatipo-detail.component';
 import { CalificacionListComponent } from '../calificacion/calificacion-list/calificacion-list.component';
 import {CalificacionDetailComponent} from '../calificacion/calificacion-detail/calificacion-detail.component';
 import { CalificacionCreateComponent } from '../calificacion/calificacion-create/calificacion-create.component';
@@ -65,7 +66,12 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: ComidatipoListComponent
+            },
+            {
+              path : ':id',
+              component: ComidatipoDetailComponent
             }
+
             
         ]
     },
