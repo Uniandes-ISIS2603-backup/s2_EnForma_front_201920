@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-
 import { ClienteService } from '../cliente.service';
-import { Cliente } from '../cliente';
+import {Cliente} from '../cliente';
 import { ClienteDetail } from '../cliente-detail';
 
 
@@ -16,8 +15,8 @@ export class ClienteDetailComponent implements OnInit {
   @Input() clienteDetail: ClienteDetail;
 
 
-  constructor(private clienteService: ClienteService,
-    private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private clienteService: ClienteService
+    ) { }
 
   cliente_id: number;
 
