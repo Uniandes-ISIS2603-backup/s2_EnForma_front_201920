@@ -9,6 +9,8 @@ import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component
 
 import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
 import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
+import { AdministradorDetailComponent } from '../administrador/administrador-detail/administrador-detail.component';
+
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
 import { CalificacionListComponent } from '../calificacion/calificacion-list/calificacion-list.component';
@@ -37,12 +39,16 @@ const routes: Routes = [
     },
 
     {
-        path: 'administrador',
+        path: 'administradores',
         children: [
             
             {
                 path: 'list',
                 component: AdministradorListComponent
+            },
+            {
+                path: 'id',
+                component: AdministradorDetailComponent
             }
             
         ]
