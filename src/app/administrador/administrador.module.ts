@@ -4,14 +4,14 @@ import { AdministradorListComponent } from './administrador-list/administrador-l
 import { AdministradorService } from './administrador.service';
 import { AdministradorDetailComponent } from './administrador-detail/administrador-detail.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import {AppRoutingModule} from '../app-routing/app-routing.module';
 import { AdministradorCreateComponent } from './administrador-create/administrador-create.component';
 
 @NgModule({
   imports: [
-    CommonModule, AppRoutingModule, ReactiveFormsModule
+    CommonModule, AppRoutingModule, FormsModule
   ],
   declarations: [AdministradorListComponent, AdministradorDetailComponent, AdministradorCreateComponent],
   exports: [AdministradorListComponent, AdministradorCreateComponent],

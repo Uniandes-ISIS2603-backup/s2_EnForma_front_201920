@@ -2,9 +2,12 @@
 <div class="container-fluid">
 
 <br>
-  <div class='row'>
+<h4>Administradores de EnForma</h4>
+  
+<div class='row'>
 
   <div class='col' *ngFor = "let a of administradores">
+          <br>
           <div class="card" style="width: 18rem;" >
           <img src="https://svgsilh.com/svg/2098873.svg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -14,16 +17,20 @@
             <a class="btn btn-info" (click)="onSelected(a.id)" type="button">Ver detalle</a>
           </div>
         </div>
-      </div>
-
-    <div class='col'>
-      <div *ngIf="selectedAdministrador">
-          <app-administrador-detail [administradorDetail]="selectedAdministrador"></app-administrador-detail>
-
   </div>
-      
 
-    </div>  
 </div>
+  
+<br>
+
+  <div class='row'>
+  
+      <div class='col'>
+          <div *ngIf="selectedAdministrador">
+              <app-administrador-detail [administradorDetail]="selectedAdministrador"></app-administrador-detail>
+          </div>    
+      </div>
+        
+    </div>
 
 </div>
