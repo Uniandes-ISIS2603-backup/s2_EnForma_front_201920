@@ -16,70 +16,57 @@
 			</tbody>
 		</table>
   <br>
-    <p class="h4 p-3">
-		Domicilios:
-	</p>
-    <table class="table table-striped">
-			<thead class="thead-dark">
-				<tr>
-					<th>id</th>
-					<th>Domicilio</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let domicilio of clienteDetail.domicilios">
-					<th>{{domicilio.id}}</th>
-					<td>{{comida.nombre}}</td>
-				</tr>
-			</tbody>
-		</table>
-     <p class="h4 p-3">
-		Domicilios:
-	</p>
-    <table class="table table-striped">
-			<thead class="thead-dark">
-				<tr>
-					<th>id</th>
-					<th>Domicilio</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let domicilio of clienteDetail.domicilios">
-					<th>{{domicilio.id}}</th>
-					<td>{{comida.nombre}}</td>
-				</tr>
-			</tbody>
-		</table>
-
-    <table class="table table-striped">
-			<thead class="thead-dark">
-				<tr>
-					<th>id</th>
-					<th>Queja</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let queja of clienteDetail.quejas">
-					<th>{{queja.id}}</th>
-					<td>{{queja.asunto}}</td>
-				</tr>
-			</tbody>
-		</table>
-
-    <table class="table table-striped">
-			<thead class="thead-dark">
-				<tr>
-					<th>Tarjeta</th>
-					<th>Puntos</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let tarjeta of clienteDetail.tarjeta">
-					<th>{{tarjeta.id}}</th>
-					<td>{{tarjeta.puntos}}</td>
-				</tr>
-			</tbody>
-		</table>
+  <p class="h4 p-3">
+	Domicilios:
+</p>
+<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>id</th>
+				<th>Domicilio</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let domicilio of clienteDetail.domicilios">
+				<th>{{domicilio.id}}</th>
+				<td>{{comida.nombre}}</td>
+			</tr>
+		</tbody>
+	</table>
+ <p class="h4 p-3">
+	Quejas:
+</p>
+<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>id</th>
+				<th>Queja</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let queja of clienteDetail.quejas">
+				<th>{{queja.id}}</th>
+				<td>{{queja.asunto}}</td>
+			</tr>
+		</tbody>
+	</table>
+<p class="h4 p-3">
+	Tarjeta:
+</p>
+<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Tarjeta</th>
+				<th>Puntos</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let tarjeta of clienteDetail.tarjeta">
+				<th>{{tarjeta.id}}</th>
+				<td>{{tarjeta.puntos}}</td>
+			</tr>
+		</tbody>
+	</table>
 
 
 
