@@ -1,67 +1,50 @@
 
-  
-  <div class=container-fluid>
-  
-<div class='row'>
-
-  <div class='col'>
-     
-      <img src="https://svgsilh.com/svg/2098873.svg" class="img-thumbnail" alt="...">
-
-  </div>
-
-
-  <div class='col'>
-      <h2>Registrar administrador</h2>
-      <br>
-  <form [formGroup]="administradorForm" (ngSubmit)="createAdministrador(administradorForm.value)" >
- 
- <div class="form-group mx-sm-3 mb-2">
+<div class="row">
     
-    
-    <label for="nombre">
-      Nombre
-    </label>
-    <input novalidate
-      id="nombre"
-      class="form-control"
-      formControlName="nombre"
-      placeholder="Your Full Name">
-   </div>
-
-    <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="administradorForm.get('nombre').hasError('required') && 
-      administradorForm.get('nombre').touched">
-      Nombre required
-</div>
-
-
-   <div class="form-group  mx-sm-3 mb-2">
-    <label for="username">
-      Username
-    </label>
-   <input id="username" type="text"
-     class="form-control"
-     formControlName="username"
-     placeholder="Tu Username">
-  </div>
-
-   <div class="form-group  mx-sm-3 mb-2">
-    <label for="contrasena">
-      Contraseña
-    </label>
-   <input id="contrasena" type="password"
-     class="form-control"
-     formControlName="contrasena"
-     placeholder="Tu Password">
-  </div>
-
-  <button class="button mx-sm-3 mb-2" type="submit">Registrar</button>
- 
-</form>
-  </div>
-
-</div>
+  
+  <div class="col-3"></div>
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Registrar un administrador</h2>
+        <br>
+        <form name="administrador" (ngSubmit)="f.form.valid && createAdministrador()" #f="ngForm" novalidate>
+            
+          
+          <div class="form-group">
+                <label for="administradorNombre"><b>Nombre</b></label>
+                <input type="text" name="administradorNombre" class="form-control" id="administradorNombre" [(ngModel)]="administrador.nombre"
+                #administradorNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && administradorNombre.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The author's name is missing</div>
+               </div>
+            </div> 
+            
+            
+            <div class="form-group">
+                <label for="administradorUsername"><b>Username</b></label>
+                <input type="text" name="administradorUsername" class="form-control" id="administradorUsername" [(ngModel)]="administrador.username"
+                #administradorUsername="ngModel" [ngClass]="{ 'is-invalid': f.submitted && administradorUsername.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The author's username is missing</div>
+               </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="administradorContrasena"><b>Contraseña</b></label>
+                <input type="password" name="administradorContrasena" class="form-control" id="administradorContrasena" [(ngModel)]="administrador.contrasena"
+                #administradorContrasena="ngModel" [ngClass]="{ 'is-invalid': f.submitted && administradorContrasena.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The author's password is missing</div>
+               </div>
+            </div>  
 
 
-  </div>
+            <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancelar</button>
+            </div>
+
+          </form>
+    </div>
+    <div class="col-3"></div>
