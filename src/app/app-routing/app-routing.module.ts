@@ -21,6 +21,8 @@ import { DomicilioListComponent } from '../domicilio/domicilio-list/domicilio-li
 import { DomicilioCreateComponent } from '../domicilio/domicilio-create/domicilio-create.component';
 import { ClienteCreateComponent } from '../cliente/cliente-create/cliente-create.component';
 import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
+import { AdministradorCreateComponent } from '../administrador/administrador-create/administrador-create.component';
+
 
 CalificacionCreateComponent
 
@@ -50,7 +52,11 @@ const routes: Routes = [
             {
                 path: 'id',
                 component: AdministradorDetailComponent
-            }
+            },
+            {
+                path: 'create',
+                component: AdministradorCreateComponent
+            },
             
         ]
     },
