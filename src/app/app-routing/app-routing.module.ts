@@ -9,13 +9,22 @@ import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component
 
 import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
 import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
+import { AdministradorDetailComponent } from '../administrador/administrador-detail/administrador-detail.component';
+
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
+import { ComidatipoDetailComponent } from '../comidatipo/comidatipo-detail/comidatipo-detail.component';
+import { ComidatipoCreateComponent } from '../comidatipo/comidatipo-create/comidatipo-create.component';
+
 import { CalificacionListComponent } from '../calificacion/calificacion-list/calificacion-list.component';
 import {CalificacionDetailComponent} from '../calificacion/calificacion-detail/calificacion-detail.component';
 import { CalificacionCreateComponent } from '../calificacion/calificacion-create/calificacion-create.component';
 import { DomicilioListComponent } from '../domicilio/domicilio-list/domicilio-list.component';
 import { DomicilioCreateComponent } from '../domicilio/domicilio-create/domicilio-create.component';
+import { ClienteCreateComponent } from '../cliente/cliente-create/cliente-create.component';
+import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
+import { AdministradorCreateComponent } from '../administrador/administrador-create/administrador-create.component';
+
 
 CalificacionCreateComponent
 
@@ -35,13 +44,21 @@ const routes: Routes = [
     },
 
     {
-        path: 'administrador',
+        path: 'administradores',
         children: [
             
             {
                 path: 'list',
                 component: AdministradorListComponent
-            }
+            },
+            {
+                path: 'id',
+                component: AdministradorDetailComponent
+            },
+            {
+                path: 'create',
+                component: AdministradorCreateComponent
+            },
             
         ]
     },
@@ -63,7 +80,16 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: ComidatipoListComponent
+            },
+            {
+              path : ':id',
+              component: ComidatipoDetailComponent
+            },
+            {
+                path: 'create',
+                component: ComidatipoCreateComponent
             }
+
             
         ]
     },
@@ -103,6 +129,20 @@ const routes: Routes = [
         ]
     },
     
+    {
+        path: 'cliente',
+        children: [
+            {
+                path: 'create',
+                component: ClienteCreateComponent
+            },
+            {
+                path: 'list',
+                component: ClienteListComponent
+            }
+            
+        ]
+    },
     
     {
         path: 'auth',

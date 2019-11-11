@@ -1,8 +1,9 @@
-export interface ComidaTipo {
+export class ComidaTipo {
 
   id: number;
-  momento : string;
+  momentoDelDia : string;
   calorias: number;
   nombre : string;
+
 
 }

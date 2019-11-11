@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 //este es el mismo comidaTipoDTO
 import { ComidaTipo } from "../comida";
+
 import {ComidatipoService} from "../comidatipo.service";
+
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-comidatipo-list',
   templateUrl: './comidatipo-list.component.html',
@@ -9,12 +13,13 @@ import {ComidatipoService} from "../comidatipo.service";
 })
 export class ComidatipoListComponent implements OnInit {
 
-  constructor(private comidaTipoService : ComidatipoService) { }
+  constructor(private comidaTipoService : ComidatipoService, private router: Router) { }
 
 comidas : ComidaTipo[];
 
+
 getComidas (): void {
-this.comidaTipoService.getComidas().subscribe(lasComidas => this.comidas = lasComidas);
+this.comidaTipoService.getComidas().subscribe(comidas => this.comidas = comidas);
 }
 
   ngOnInit() {
