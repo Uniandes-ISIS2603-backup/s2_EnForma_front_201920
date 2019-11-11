@@ -1,4 +1,5 @@
 import { Dieta } from '../dietas/dieta';
+import { Cliente } from '../cliente/cliente';
 
 
 export class Calificacion 
@@ -8,4 +9,5 @@ export class Calificacion
   comentario: string;
   fecha: string;
   dieta: Dieta;
+  cliente: Cliente;
 }
