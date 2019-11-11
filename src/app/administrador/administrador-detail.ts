@@ -1,10 +1,10 @@
-//import {DietaTipo} from '../dietaTipo/dietaTipo'
-//import {ComidaTipo} from '../comidaTipo/comidaTipo'
+import {Dieta} from '../dietas/dieta'
+import {ComidaTipo} from '../comidatipo/comida'
 import {Administrador} from "./administrador";
 
 export class AdministradorDetail extends Administrador {
 
-  //dietas: DietaTipo[]
-  //comidas: ComidaTipo[]
+  dietas: Dieta[];
+  comidas: ComidaTipo[];
 
 }

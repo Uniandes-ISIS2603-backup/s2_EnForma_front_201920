@@ -12,16 +12,15 @@ import { AdministradorDetail } from '../administrador-detail';
   styleUrls: ['./administrador-detail.component.css']
 })
 export class AdministradorDetailComponent implements OnInit {
-
-  constructor(private administradorService: AdministradorService,
-    private route: ActivatedRoute) { }
-
-
   administradorDetail: AdministradorDetail;
 
   @Input() administrador_id: number;
 
   loader:any;
+
+
+  constructor(private administradorService: AdministradorService,
+    private route: ActivatedRoute) { }
 
   /**
   * The method which retrieves the books of an editorial
@@ -51,5 +50,4 @@ export class AdministradorDetailComponent implements OnInit {
   ngOnDestroy() {
     this.loader.unsubscribe();
   }
-
 }
