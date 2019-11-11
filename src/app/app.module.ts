@@ -52,7 +52,8 @@ import {ClienteModule} from './cliente/cliente.module';
         DietasModule,
         ComidatipoModule,
         CalificacionModule,
-        DomicilioModule, ClienteModule
+        DomicilioModule, 
+        ClienteModule
 
     ],
     bootstrap: [AppComponent],

@@ -3,17 +3,24 @@
 
   <div class='row'>
 
-  <div class='col'>
-          <div class="card" style="width: 18rem;" *ngFor = "let c of clientes">
+  <div class='col'  *ngFor = "let c of clientes">
+  <div class="card" style="width: 18rem;">
         
           <div class="card-body">
           <h5 class="card-title" >{{c.nombre}}</h5>
              <p class="card-text">Id: {{c.id}}</p>
             <p class="card-text">Username: {{c.userName}}</p>
-          	<a class="btn btn-primary" [routerLink] ="['/clientes', { outlets: { 'detail': [c.id] } }]">Ver detalle</a>
-        </div>
+            <a class="btn btn-info" (click)="onSelected(c.id)" type="button">Ver</a>
+          </div>
         </div>
       </div>
+
+      <div class='col'>
+        <div *ngIf="selectedCliente">
+            <app-cliente-detail [ClienteDetail]="selectedCliente"></app-cliente-detail>
+  
+    </div>
 </div>
 
+</div>
 </div>

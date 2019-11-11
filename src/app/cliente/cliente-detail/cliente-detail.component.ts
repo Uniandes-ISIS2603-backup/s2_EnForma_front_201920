@@ -13,15 +13,15 @@ import { ClienteDetail } from '../cliente-detail';
 })
 export class ClienteDetailComponent implements OnInit {
 
+  @Input() clienteDetail: ClienteDetail;
+
+
   constructor(private clienteService: ClienteService,
     private route: ActivatedRoute) { }
 
+  cliente_id: number;
 
-  clienteDetail: ClienteDetail;
-
-  @Input() cliente_id: number;
-
-  loader:any;
+ // loader:any;
 
   /**
   * The method which retrieves the books of an editorial
@@ -34,22 +34,30 @@ export class ClienteDetailComponent implements OnInit {
   }
 
 
-  onLoad(params) {
-    this.cliente_id = parseInt(params["id"]);
-    this.clienteDetail = new ClienteDetail();
-    this.getClienteDetail();
-  }
+  //onLoad(params) {
+    //this.cliente_id = parseInt(params["id"]);
+    //this.clienteDetail = new ClienteDetail();
+    //this.getClienteDetail();
+  //}
 
 
+
+ // ngOnInit() {
+   // this.loader = this.route.params.subscribe((params: Params) =>
+     // this.onLoad(params)
+    //);
+  //}
+
+  //ngOnDestroy() {
+    //this.loader.unsubscribe();
+  //}
 
   ngOnInit() {
-    this.loader = this.route.params.subscribe((params: Params) =>
-      this.onLoad(params)
-    );
-  }
-
-  ngOnDestroy() {
-    this.loader.unsubscribe();
-  }
+    this.cliente_id = +this.route.snapshot.paramMap.get('id');
+    if (this.cliente_id){
+    this.clienteDetail = new ClienteDetail();
+    this.getClienteDetail();
+    }
+}
 
 }

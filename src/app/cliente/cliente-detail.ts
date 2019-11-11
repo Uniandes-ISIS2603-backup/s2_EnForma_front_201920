@@ -1,14 +1,14 @@
 import {Cliente} from "./cliente";
-//import {DietaTipo} from '../dietaTipo/dietaTipo',
+import {Dieta} from '../dietas/dieta';
 //import {QuejasYReclamos} from '../quejasYReclamos/quejasYReclamos'
-// import {Domicilios} from '../domicilios/domicilios'
-// import {TarjetaPrepago} from '../tarjetaPrepago/tarjetaPrepago
+import {Domicilio} from '../domicilio/domicilio'
+//import {TarjetaPrepago} from '../tarjetaPrepago/tarjetaPrepago
 
-export class ClienteDetail// extends Cliente
+export class ClienteDetail extends Cliente
 {
-//dieta : DietaTipo;
+dieta : Dieta;
 //quejas : QuejasYReclamos;
-//domicilios : Domicilos;
+domicilios : Domicilio[];
 //tarjeta : TarjetaPrepago;
 
 }
