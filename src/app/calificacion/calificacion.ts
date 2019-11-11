@@ -6,6 +6,6 @@ export class Calificacion
   id: number;
   puntaje: number;
   comentario: string;
-  fecha: Date;
+  fecha: string;
   dieta: Dieta;
 }
