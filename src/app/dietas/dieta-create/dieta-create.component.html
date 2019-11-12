@@ -1,0 +1,109 @@
+<div class="row">
+    
+  
+    <div class="col-3"></div>
+      <div class="col-6">
+          <br>
+          <h2 class="text-center">Registrar una Dieta</h2>
+          <br>
+          <form name="dieta" (ngSubmit)="f.form.valid && createDieta()" #f="ngForm" novalidate>
+              
+            
+            <div class="form-group">
+                  <label for="dietaNombre"><b>Nombre</b></label>
+                  <input type="text" name="dietaNombre" class="form-control" id="dietaNombre" [(ngModel)]="dieta.nombre"
+                  #dietaNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaNombre.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>The Dieta's name is missing </div>
+                 </div>
+              </div> 
+              
+              
+              <div class="form-group">
+                  <label for="dietaCaloriasMin"><b>Calorías Mínimas</b></label>
+                  <input type="text" name="dietaCaloriasMin" class="form-control" id="dietaCaloriasMin" [(ngModel)]="dieta.caloriasMin"
+                  #dietaCaloriasMin="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaCaloriasMin.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>The dietas's Calorias Minimas is missing</div>
+                 </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="dietaCaloriasMax"><b>Calorías Máximas</b></label>
+                <input type="text" name="dietaCaloriasMax" class="form-control" id="dietaCaloriasMax" [(ngModel)]="dieta.caloriasMax"
+                #dietaCaloriasMax="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaCaloriasMax.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The dietas's Calorias Máximas is missing</div>
+               </div>
+            </div>
+              
+            <div class="form-group">
+                <label for="dietaCantidadAzucar"><b>Cantidad Azúcar</b></label>
+                <input type="text" name="dietaCantidadAzucar" class="form-control" id="dietaCantidadAzucar" [(ngModel)]="dieta.cantidadAzucar"
+                #dietaCantidadAzucar="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaCantidadAzucar.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The dietas's Cantidad Azúcar is missing</div>
+               </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dietaCantidadGrasa"><b>Cantidad Grasa</b></label>
+                <input type="text" name="dietaCantidadGrasa" class="form-control" id="dietaCantidadGrasa" [(ngModel)]="dieta.cantidadGrasa"
+                #dietaCantidadGrasa="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaCantidadGrasa.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The dietas's Cantidad Grasa is missing</div>
+               </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dietaCantidadFibra"><b>Cantidad Fibra</b></label>
+                <input type="text" name="dietaCantidadFibra" class="form-control" id="dietaCantidadFibra" [(ngModel)]="dieta.cantidadFibra"
+                #dietaCantidadFibra="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaCantidadFibra.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The dietas's Cantidad Fibra is missing</div>
+               </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dietaTieneGluten"><b>¿Contiene Gluten? (true/false)</b></label>
+                <input type="text" name="dietaTieneGluten" class="form-control" id="dietaTieneGluten" [(ngModel)]="dieta.tieneGluten"
+                #dietaTieneGluten="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaTieneGluten.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The dietas's Contiene Gluten is missing</div>
+               </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dietaTieneLactosa"><b>¿Contiene Lactosa? (true/false)</b></label>
+                <input type="text" name="dietaTieneLactosa" class="form-control" id="dietaTieneLactosa" [(ngModel)]="dieta.tieneLactosa"
+                #dietaTieneLactosa="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaTieneLactosa.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The dietas's Contiene Lactosa is missing</div>
+               </div>
+            </div>
+
+            <div class="form-group">
+                    <label for="dietaAdministrador"><b>ID del Administrador que la crea</b></label>
+                    <select class="custom-select" name="dietaAdministrador" id="dietaAdministrador" [(ngModel)]="dieta.administrador.id"
+                        #dietaAdministrador="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaAdministrador.invalid }"
+                        required>
+                        <option [value]="administrador.id" *ngFor="let administrador of administradores">{{administrador.username}}</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        <div>The dietas's Administrador id is missing</div>
+                   </div>
+                </div>
+
+  
+  
+              <div class="row form-inline justify-content-center align-self-center">
+                  <button type="submit" class="btn btn-primary">Registrar</button>
+                  <div class="divider"></div>
+                  <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancelar</button>
+              </div>
+  
+            </form>
+      </div>
+      <div class="col-3"></div>
+  

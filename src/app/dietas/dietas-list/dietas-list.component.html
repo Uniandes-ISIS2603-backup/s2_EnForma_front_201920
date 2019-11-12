@@ -1,32 +1,35 @@
+
 <div class="container-fluid">
-  <div class="col-md-2">
-    <table class="table table-striped">
-      <thead class="thead-dark">
-        <tr>
-          <th>Id
-          <th>Dieta Nombre</th>
-          <th>Calorias Mínimas</th>
-          <th>Calorias Maximas</th>
-          <th>Cantidad de Azucar</th>
-          <th>Cantidad de Fibra</th>
-          <th>Cantidad de Grasa</th>
-          <th>¿Contiene Gluten?</th>
-          <th>¿Contiene Lactosa?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor = "let d of dietas">
-           <td>{{d.id}}</td>
-           <td>{{d.nombre}}</td>
-           <td>{{d.caloriasMin}}</td>
-           <td>{{d.caloriasMax}}</td>
-           <td>{{d.cantidadAzucar}}</td>
-           <td>{{d.cantidadFibra}}</td>
-           <td>{{d.cantidadGrasa}}</td>
-           <td>{{d.tieneGluten}}</td>
-           <td>{{d.tieneLactosa}}</td>
-        </tr>
-      </tbody>
-    </table>
+
+    <h4>Dietas de EnForma</h4>
+    <div class='row'>
+  
+    <div class='col'  *ngFor = "let d of dietas">
+    <div class="card" style="width: 14rem;">
+        <img src="https://fotos02.lne.es/2019/09/25/690x278/dos-reglas-comer-adelgazar.jpg" class="card-img-top" alt="Responsive image">
+          
+            <div class="card-body">
+            <h5 class="card-title" >{{d.nombre}}</h5>
+              <p class="card-text">¿Tiene Gluten?: {{d.tieneGluten}}</p>
+              <p class="card-text">¿Tiene Lactosa?: {{d.tieneLactosa}}</p>
+              <p class="card-text">Nutricionista: {{d.administrador}}</p>
+
+              <a class="btn btn-outline-info" (click)="onSelected(d.id)" type="button">Detalles</a>
+            </div>
+          </div>
+        </div>
+  
+
+
+        <div class='col'>
+            <div *ngIf="selectedDieta">
+                <app-dieta-detail [dietaDetail]="selectedDieta"></app-dieta-detail>
+
+        </div>
+      </div>
+        
+  
   </div>
-</div>
+
+
+  </div>

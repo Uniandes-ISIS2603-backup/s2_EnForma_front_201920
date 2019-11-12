@@ -27,6 +27,7 @@ import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.compo
 import {ClienteDetailComponent} from '../cliente/cliente-detail/cliente-detail.component';
 import {AdministradorCreateComponent } from '../administrador/administrador-create/administrador-create.component';
 import { DomicilioDetailComponent } from '../domicilio/domicilio-detail/domicilio-detail.component';
+import { DietaCreateComponent } from '../dietas/dieta-create/dieta-create.component';
 
 
 CalificacionCreateComponent
@@ -41,6 +42,10 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: DietasListComponent
+            },
+            {
+                path: 'create',
+                component: DietaCreateComponent
             }
             
         ]

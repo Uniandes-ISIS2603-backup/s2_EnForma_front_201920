@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DietasListComponent } from './dietas-list/dietas-list.component';
 import { DietaService } from './dieta.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { DietaCreateComponent } from './dieta-create/dieta-create.component';
+import { DietaDetailComponent } from './dieta-detail/dieta-detail.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    FormsModule
   ],
-  declarations: [DietasListComponent],
-  exports: [DietasListComponent],
+  declarations: [DietasListComponent, DietaDetailComponent, DietaCreateComponent],
+  exports: [DietasListComponent, DietaCreateComponent],
   providers: [DietaService]
 })
 export class DietasModule { }
