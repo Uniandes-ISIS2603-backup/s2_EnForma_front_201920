@@ -121,8 +121,7 @@ const routes: Routes = [
         children: [
             {
                 path: 'create',
-                component: DomicilioCreateComponent,
-                outlet: 'right'
+                component: DomicilioCreateComponent
             },
             {
                 path: 'list',
@@ -130,8 +129,7 @@ const routes: Routes = [
             },
             {
                 path: 'id',
-                component: DomicilioDetailComponent,
-                outlet: 'right'
+                component: DomicilioDetailComponent
             }
             
         ]

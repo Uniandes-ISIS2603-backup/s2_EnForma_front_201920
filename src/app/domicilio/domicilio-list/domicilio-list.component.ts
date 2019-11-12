@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Domicilio } from '../domicilio';
 import { DomicilioService } from '../domicilio.service';
+import { DomicilioDetail } from '../domicilio-detail';
 
 @Component({
-  selector: 'list-domicilio',
+  selector: 'app-domicilio-list',
   templateUrl: './domicilio-list.component.html',
   styleUrls: ['./domicilio-list.component.css']
 })
@@ -26,6 +27,23 @@ export class DomicilioListComponent implements OnInit
   getDomicilios(): void 
   {
     this.domicilioService.getDomicilios().subscribe(domicilios => this.domicilios = domicilios);
+  }
+
+  selectedDomicilio : Domicilio;
+
+  onSelected(domicilio_id: number):void 
+  {
+    this.domicilio_id = domicilio_id;
+    this.selectedDomicilio = new DomicilioDetail();
+    this.getDomicilioDetail();     
+  }
+
+  getDomicilioDetail(): void
+  {
+    this.domicilioService.getDomicilioDetail(this.domicilio_id)
+     .subscribe(selecteddomicilio => {
+         this.selectedDomicilio = selecteddomicilio
+     });
   }
 
 

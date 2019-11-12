@@ -21,14 +21,14 @@ export class DomicilioDetailComponent implements OnInit {
   /**
   * The domicilio whose details we want to show
   */
-  domicilioDetail: DomicilioDetail;
+ @Input() domicilioDetail: DomicilioDetail;
 
 
 
   /**
   * The domicilio's id retrieved from the address
   */
-  @Input() domicilio_id: number;
+  domicilio_id: number;
 
   loader: any;
 

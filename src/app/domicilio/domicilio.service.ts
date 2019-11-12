@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Domicilio } from './domicilio';
 import { DomicilioDetail } from './domicilio-detail';
 import { Observable } from 'rxjs';
+import { catchError, map, tap } from "rxjs/operators";
 
 const API_URL = "http://localhost:8080/s2_enforma-api/api/";
 const domicilios = 'domicilios';
@@ -11,6 +12,10 @@ const domicilios = 'domicilios';
 export class DomicilioService {
 
   constructor(private http: HttpClient) { }
+  
+  httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json" })
+  };
 
   getDomicilios() : Observable<Domicilio[]> 
   {
@@ -23,8 +28,7 @@ export class DomicilioService {
     */
   getDomicilioDetail(domicilioId): Observable<DomicilioDetail> 
   {
-    console.log(domicilioId+" "+API_URL + "domicilio-" + domicilioId+".json");
-    return this.http.get<DomicilioDetail>(API_URL + "domicilio" +'/'+ domicilioId);
+    return this.http.get<DomicilioDetail>(API_URL + domicilios +'/'+ domicilioId);
   }
 
   createDomicilio(domicilio: Domicilio): Observable<Domicilio> 
