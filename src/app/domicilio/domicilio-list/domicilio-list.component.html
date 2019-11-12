@@ -18,19 +18,19 @@
 							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.id}}</a>
 						</td>
             <td style="cursor: pointer;">
-							<a class="figure-caption" [routerLink] ="['/domicilios', { outlets: { 'right': [i.fecha] } }]">{{i.fecha}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.fecha}}</a>
 						</td>
             <td style="cursor: pointer;">
-							<a class="figure-caption" [routerLink] ="['/domicilios', { outlets: { 'right': [i.lugarEntrega] } }]">{{i.lugarEntrega}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.lugarEntrega}}</a>
 						</td>
             <td style="cursor: pointer;">
-							<a class="figure-caption" [routerLink] ="['/domicilios', { outlets: { 'right': [i.costo] } }]">{{i.costo}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.costo}}</a>
 						</td>
             <td style="cursor: pointer;">
-							<a class="figure-caption" [routerLink] ="['/domicilios', { outlets: { 'right': [i.id] } }]">{{i.cliente}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.cliente}}</a>
 						</td>
             <td style="cursor: pointer;">
-							<a class="figure-caption" [routerLink] ="['/domicilios', { outlets: { 'right': [i.id] } }]">{{i.comidaTipo}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.comidaTipo}}</a>
 						</td>
             
 
