@@ -1,50 +1,49 @@
-<form [formGroup]="domicilioForm" (ngSubmit)="!domicilioForm.invalid && createDomicilio(domicilioForm.value)">
-
-  <div class="form-group mx-sm-3 mb-2">
-		<label for="lugarEntrega">
-      Domicilio LugarEntrega
-    </label>
-		<input type="text"
-    id="lugarEntrega"
-    class="form-control"
-      formControlName="lugarEntrega"
-      placeholder="">
-
-		<div class="alert alert-danger alert-dismissible fade show"
-			*ngIf="domicilioForm.get('lugarEntrega').hasError('required') && domicilioForm.get('lugarEntrega').touched">
-			LugarEntrega required
-		</div>
-	</div>
-
-	<div class="form-group  mx-sm-3 mb-2">
-		<label for="costo">
-      Domicilio Costo
-    </label>
-		<input id="costo" type="text"
-     class="form-control"
-     formControlName="costo"
-     placeholder="">
-
-		<div class="alert alert-danger alert-dismissible fade show"
-			*ngIf="domicilioForm.get('costo').hasError('required') && domicilioForm.get('costo').touched">
-			Costo required
-		</div>
-  </div>
-
-  	<div class="form-group  mx-sm-3 mb-2">
-		<label for="fecha">
-      Domicilio Fecha
-    </label>
-		<input id="fecha" type="text"
-     class="form-control"
-     formControlName="fecha"
-     placeholder="">
-
-		<div class="alert alert-danger alert-dismissible fade show"
-			*ngIf="domicilioForm.get('fecha').hasError('required') && domicilioForm.get('fecha').touched">
-			Fecha required
-		</div>
-  </div>
-		<button class="button mx-sm-3 mb-2" type="submit">Create</button>
-
-</form>
+<div class="row">
+    
+  
+	<div class="col-3"></div>
+	  <div class="col-6">
+		  <br>
+		  <h2 class="text-center">Crear un domicilio</h2>
+		  <br>
+		  <form name="domicilio" (ngSubmit)="f.form.valid && createDomicilio()" #f="ngForm" novalidate>
+			  
+			
+			<div class="form-group">
+				  <label for="domicilioLugarEntrega"><b>Lugar de entrega</b></label>
+				  <input type="text" name="domicilioLugarEntrega" class="form-control" id="domicilioLugarEntrega" [(ngModel)]="domicilio.lugarEntrega"
+				  #domicilioLugarEntrega="ngModel" [ngClass]="{ 'is-invalid': f.submitted && domicilioLugarEntrega.invalid }" required>
+				  <div class="invalid-feedback">
+					  <div>El lugar de entrega no puede ser invalido</div>
+				 </div>
+			  </div> 
+			  
+			  
+			  <div class="form-group">
+				  <label for="domicilioCosto"><b>Costo</b></label>
+				  <input type="text" name="domicilioCosto" class="form-control" id="domicilioCosto" [(ngModel)]="domicilio.costo"
+				  #domicilioCosto="ngModel" [ngClass]="{ 'is-invalid': f.submitted && domicilioCosto.invalid }" required>
+				  <div class="invalid-feedback">
+					  <div>El costo no puede ser invalido</div>
+				 </div>
+			  </div>
+			  
+			  <div class="form-group">
+				  <label for="domicilioFecha"><b>Fecha</b></label>
+				  <input type="text" name="domicilioFecha" class="form-control" id="domicilioFecha" [(ngModel)]="domicilio.fecha"
+				  #domicilioFecha="ngModel" [ngClass]="{ 'is-invalid': f.submitted && domicilioFecha.invalid }" required>
+				  <div class="invalid-feedback">
+					  <div>La fecha no puede ser invalida</div>
+				 </div>
+			  </div>  
+  
+  
+			  <div class="row form-inline justify-content-center align-self-center">
+				  <button type="submit" class="btn btn-primary">Crear</button>
+				  
+			  </div>
+  
+			</form>
+	  </div>
+	  <div class="col-3"></div>
+  
