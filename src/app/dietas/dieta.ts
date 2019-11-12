@@ -1,3 +1,5 @@
+import { Administrador } from "../administrador/administrador";
+
 export class Dieta {
 /**
     * The editorial's id
@@ -16,6 +18,8 @@ export class Dieta {
     cantidadFibra: number;
     tieneGluten: boolean;
     tieneLactosa: boolean;
+
+    administrador: Administrador;
   
 
 }

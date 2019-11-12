@@ -1,3 +1,97 @@
-<p>
-dieta-detail works!
-</p>
+<div class="container-fluid">
+        <h1>Información de la Dieta: {{dietaDetail.nombre}}</h1>
+        
+        <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Calorias Minimas</th>
+                        <th>Calorias Maximas</th>
+                        <th>Cantidad Azucar</th>
+                        <th>Cantidad Fibra</th>
+                        <th>Cantidad Grasa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>{{dietaDetail.caloriasMin}}</th>
+                        <th>{{dietaDetail.caloriasMax}}</th>
+                        <th>{{dietaDetail.cantidadAzucar}}</th>
+                        <th>{{dietaDetail.cantidadFibra}}</th>
+                        <th>{{dietaDetail.cantidadGrasa}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <br>
+
+            <hr>
+        
+        
+        
+        
+        <p class="h4 p-3">
+              Calificaciones:
+          </p>
+              <table class="table table-striped">
+                  <thead class="thead-dark">
+                      <tr>
+                          <th>id</th>
+                          <th>Puntaje</th>
+                          <th>Fecha</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let calificacion of dietaDetail.calificaciones">
+                          <th>{{calificacion.id}}</th>
+                          <td>{{calificacion.puntaje}}</td>
+                          <td>{{calificacion.fecha}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+        <br>
+        <hr>
+
+
+
+          <p class="h4 p-3">
+              Comidas:
+          </p>
+          <table class="table table-striped">
+                  <thead class="thead-dark">
+                      <tr>
+                          <th>id</th>
+                          <th>Nombre</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let comida of dietaDetail.comidas">
+                          <th>{{comida.id}}</th>
+                          <td>{{comida.nombre}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+              <hr>
+
+
+          <p class="h4 p-3">
+              Clientes:
+          </p>
+          <table class="table table-striped">
+                  <thead class="thead-dark">
+                      <tr>
+                          <th>id</th>
+                          <th>Nombre</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let cliente of dietaDetail.clientes">
+                          <th>{{cliente.id}}</th>
+                          <td>{{cliente.nombre}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+      
+      
+      </div>
+      
