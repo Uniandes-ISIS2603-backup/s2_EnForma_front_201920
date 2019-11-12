@@ -1,0 +1,142 @@
+<!-- <div class=container-fluid>
+
+    <div class='row'>
+
+        <div class='col-6'>
+            <h2>Registrar Comida</h2>
+
+            <form class="comida-form">
+                <input type="file" (change)="onFileSelected($event)">
+                <div class="button-row">
+                    <button mat-raised-button color="primary" (click)="onUpload()">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<!-- 
+<div class=container-fluid>
+
+    <div class='row'>
+
+
+
+        <div class='col-6'>
+            <h2>Registrar Comida</h2>
+            <br>
+            <form name="comida" (ngSubmit)="f.form.valid && createComida(comidaForm.value)" #f="ngForm" novalidate>
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="nombreComida">
+                        Nombre
+                    </label>
+                    <input name="nombre" placeholder="Nombre de la Comida">
+                    <div class="invalid-feedback">
+                        <div>The comidas name is missing</div>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger alert-dismissible fade show" *ngIf="comidaForm.get('nombre').hasError('required') && 
+              comidaForm.get('nombre').touched">
+                    Nombre requerido
+                </div>
+
+
+                <div class="form-group  mx-sm-3 mb-2">
+                    <label for="calorias">
+                        Calorias
+                    </label>
+                    <input id="calorias" type="number" class="form-control" formControlName="calorias"
+                        [(ngModel)]="comida.calorias" #comidaCalorias="ngModel"
+                        [ngClass]="{ 'is-invalid': f.submitted && comidaCalorias.invalid }" required placeholder="">
+                </div>
+
+                <div class="form-group  mx-sm-3 mb-2">
+                    <label for="momentoDelDia">
+                        Momento Del Día
+                    </label>
+                    <input id="momentoDelDia" type="text" class="form-control" formControlName="momentoDelDia"
+                        [(ngModel)]="comida.momentoDelDia" #comidaMomentoDelDia="ngModel"
+                        [ngClass]="{ 'is-invalid': f.submitted && comidaMomentoDelDia.invalid }" required
+                        placeholder="">
+                </div>
+
+                <div class="form-group  mx-sm-3 mb-2">
+                    <label for="menu">
+                        Menú
+                    </label>
+                    <input id="menu" type="text" class="form-control" formControlName="menu" [(ngModel)]="comida.menu"
+                        #comidaMenu="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaMenu.invalid }" required
+                        placeholder="El menú de la comida">
+                </div>
+
+                <button class="button mx-sm-3 mb-2" type="submit">Registrar</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+</div> -->
+
+
+<div class="row">
+    
+  
+        <div class="col-3"></div>
+          <div class="col-6">
+              <br>
+              <h2 class="text-center">Registrar una Comida</h2>
+              <br>
+              <form name="comida" (ngSubmit)="f.form.valid && createComida()" #f="ngForm" novalidate>
+                  
+                
+                <div class="form-group">
+                      <label for="comidaNombre"><b>Nombre</b></label>
+                      <input type="text" name="comidaNombre" class="form-control" id="comidaNombre" [(ngModel)]="comida.nombre"
+                      #comidaNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaNombre.invalid }" required>
+                      <div class="invalid-feedback">
+                          <div>The Comida's name is missing</div>
+                     </div>
+                  </div> 
+                  
+                  
+                  <div class="form-group">
+                      <label for="comidaMomentoDelDia"><b>MomentoDelDia</b></label>
+                      <input type="text" name="comidaMomentoDelDia" class="form-control" id="comidaMomentoDelDia" [(ngModel)]="comida.momentoDelDia"
+                      #comidaMomentoDelDia="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaMomentoDelDia.invalid }" required>
+                      <div class="invalid-feedback">
+                          <div>The comida's momento del dia is missing</div>
+                     </div>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="comidaCalorias"><b>Contraseña</b></label>
+                      <input type="number" name="comidaCalorias" class="form-control" id="comidaCalorias" [(ngModel)]="comida.calorias"
+                      #comidaCalorias="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaCalorias.invalid }" required>
+                      <div class="invalid-feedback">
+                          <div>The comida's calorias is missing</div>
+                     </div>
+                  </div>  
+                  
+                  <div class="form-group">
+                        <label for="comidaMenu"><b>Contraseña</b></label>
+                        <input type="text" name="comidaMenu" class="form-control" id="comidaMenu" [(ngModel)]="comida.menu"
+                        #comidaMenu="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaMenu.invalid }" required>
+                        <div class="invalid-feedback">
+                            <div>The comida's menu missing</div>
+                       </div>
+                    </div> 
+      
+                  <div class="row form-inline justify-content-center align-self-center">
+                      <button type="submit" class="btn btn-primary">Registrar</button>
+                      <div class="divider"></div>
+                      <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancelar</button>
+                  </div>
+      
+                </form>
+          </div>
+          <div class="col-3"></div>
