@@ -29,11 +29,11 @@
 					
 						
 						<td style="cursor: pointer;">
-							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.cliente}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" ><div *ngIf = "i?.cliente?.nombre!=null">{{i.cliente.nombre}}</div></a>
 						</td>						
 					
             			<td style="cursor: pointer;">
-							<a class="figure-caption" (click)="onSelected(i.id)" >{{i.comidaTipo}}</a>
+							<a class="figure-caption" (click)="onSelected(i.id)" ><div *ngIf = "i?.comidaTipo?.nombre!=null">{{i.comidaTipo.nombre}}</div></a>
 						</td>
 					
             
