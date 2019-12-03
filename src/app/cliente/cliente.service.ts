@@ -27,6 +27,10 @@ export class ClienteService {
      return this.http.get<ClienteDetail>(API_URL+clientes+"/"+clienteId)
     }
 
+    getClienteUsername(clienteUsername): Observable<ClienteDetail> {
+      return this.http.get<ClienteDetail>(API_URL+clientes+"/"+clienteUsername)
+     }
+
     createCliente(cliente: Cliente): Observable<Cliente>
      {
       
