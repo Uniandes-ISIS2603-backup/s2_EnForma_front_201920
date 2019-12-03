@@ -21,6 +21,7 @@ export class ComidatipoService {
 
   getComidas(): Observable<ComidaTipo[]> {
     console.log(API_URL + comidas);
+    console.log(this.http.get<ComidaTipo[]>(API_URL + comidas));
     return this.http.get<ComidaTipo[]>(API_URL + comidas);
   }
 
