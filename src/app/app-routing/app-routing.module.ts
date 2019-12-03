@@ -45,7 +45,13 @@ const routes: Routes = [
             },
             {
                 path: 'create',
-                component: DietaCreateComponent
+                component: DietaCreateComponent,
+                canActivate: [NgxPermissionsGuard],
+                data:{
+                    permissions:{
+                        only: ['ADMIN']
+                    }
+                }
             }
             
         ]

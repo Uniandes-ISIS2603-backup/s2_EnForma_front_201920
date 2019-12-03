@@ -29,6 +29,7 @@ export class AuthService {
         } else {
             this.setClientRole();
         }
+        this.printRole();
     }
 
     setGuestRole (): void {
@@ -62,7 +63,7 @@ export class AuthService {
         } else {
             this.setClientRole()
         }
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/administradores/list', { skipLocationChange: true });
     }
 
     /**

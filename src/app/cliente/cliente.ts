@@ -4,7 +4,7 @@ export class Cliente {
 id:number;
 nombre: string;
 username: string;
-contrasena: string;
+contrasenia: string;
 objetivos : string;
 edad : number;
 gluten : boolean;
