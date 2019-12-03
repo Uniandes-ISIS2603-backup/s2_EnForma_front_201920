@@ -61,6 +61,27 @@
      formControlName="edad"
      placeholder="Tu edad">
   </div>
+
+  <div class="form-group  mx-sm-3 mb-2">
+      <label for="lactosa">
+        ¿Intolerante a la lactosa? (True/False)
+      </label>
+     <input id="edad" type="text"
+       class="form-control"
+       formControlName="lactosa"
+       placeholder="Intolerancias">
+    </div>
+
+    <div class="form-group  mx-sm-3 mb-2">
+        <label for="gluten">
+          ¿Intolerante al gluten? (True/False)
+        </label>
+       <input id="gluten" type="text"
+         class="form-control"
+         formControlName="gluten"
+         placeholder="Intolerancias">
+      </div>
+
   </div>
   <button type="button" class="btn btn-success" (click) = "createCliente">Registrar</button>
 </form>
