@@ -18,7 +18,7 @@ export class CalificacionCreateComponent implements OnInit
   calificacionForm: FormGroup;
   calificaciones: Calificacion[];
 
-  myDate:String;
+  myDate:string;
   Date = new Date();
   
 
