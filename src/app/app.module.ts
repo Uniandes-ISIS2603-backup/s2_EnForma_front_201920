@@ -24,6 +24,7 @@ import {DomicilioModule} from './domicilio/domicilio.module';
 import {ClienteModule} from './cliente/cliente.module';
 import { PaginaprincipalModule } from './paginaprincipal/paginaprincipal.module';
 import { TarjetaModule } from './tarjeta/tarjeta.module';
+import {QuejaReclamoModule} from './queja-reclamo/queja-reclamo.module';
 
 
 
@@ -57,7 +58,8 @@ import { TarjetaModule } from './tarjeta/tarjeta.module';
         DomicilioModule, 
         ClienteModule,
         PaginaprincipalModule,
-        TarjetaModule
+        TarjetaModule,
+        QuejaReclamoModule
 
     ],
     bootstrap: [AppComponent],

@@ -4,6 +4,7 @@ import { Dieta } from './dieta';
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from "rxjs/operators";
 import { DietaDetail } from './dieta-detail';
+import { Calificacion } from '../calificacion/calificacion';
 
 
 
@@ -37,6 +38,9 @@ export class DietaService {
       return this.http.post<Dieta>(API_URL+dietas, dieta, this.httpOptions).pipe(tap((dieta: Dieta) => console.log(`added dieta w/ ${dieta.nombre} id=${dieta.id}`)));
     }
 
+    getCalificacionesDieta(dietaId): Observable<Calificacion[]> {
+      return this.http.get<Calificacion[]>(API_URL+dietas+"/"+dietaId +"/calificaciones");
+    }
 
     
   }

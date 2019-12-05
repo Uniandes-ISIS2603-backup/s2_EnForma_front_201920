@@ -15,6 +15,8 @@
               <p class="card-text">Nutricionista: {{d.administrador}}</p>
 
               <a class="btn btn-outline-info" (click)="onSelected(d.id)" type="button">Detalles</a>
+              <a class="btn btn-outline-info" (click)="onSelected2(d.id)" type="button">Crear Calificacion</a>
+              <a class="btn btn-outline-info" (click)="onSelected3(d.id)" type="button">Calificaciones</a>
             </div>
           </div>
         </div>
@@ -26,6 +28,21 @@
                 <app-dieta-detail [dietaDetail]="selectedDieta"></app-dieta-detail>
 
         </div>
+
+        <div class="col">
+            <div *ngIf="selectedDieta2">
+                <app-calificacion-create [idDieta]="selectedDieta2"></app-calificacion-create>
+    
+        </div>
+
+        <div class="col">
+            <div *ngIf="selectedDieta3">
+                <app-calificacionesdieta-list [idDieta]="selectedDieta3"></app-calificacionesdieta-list>
+    
+        </div>
+
+        </div>
+      
       </div>
         
   

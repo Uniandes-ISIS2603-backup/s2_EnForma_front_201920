@@ -32,9 +32,12 @@ import { PaginaGuestComponent } from '../paginaprincipal/pagina-guest/pagina-gue
 import { TarjetaListComponent } from '../tarjeta/tarjeta-list/tarjeta-list.component';
 import { TarjetaDetailComponent } from '../tarjeta/tarjeta-detail/tarjeta-detail.component';
 import { TarjetaCreateComponent } from '../tarjeta/tarjeta-create/tarjeta-create.component';
+import { QuejaReclamoDetailComponent } from '../queja-reclamo/queja-reclamo-detail/queja-reclamo-detail.component';
+import { QuejaReclamoListComponent } from '../queja-reclamo/queja-reclamo-list/queja-reclamo-list.component';
+import { QuejaReclamoCreateComponent } from '../queja-reclamo/queja-reclamo-create/queja-reclamo-create.component';
 
 
-CalificacionCreateComponent
+
 
 
 const routes: Routes = [
@@ -186,6 +189,25 @@ const routes: Routes = [
                 path: 'create',
                 component:  TarjetaCreateComponent
             },
+            
+        ]
+    },
+    {
+        path: 'quejasyreclamos',
+        children: [
+            {
+                path: 'list',
+                component: QuejaReclamoListComponent,
+            },
+            {
+                path: ':id', 
+                component: QuejaReclamoDetailComponent,
+                outlet: 'detail'
+            },
+            {
+                path: 'create',
+                component:QuejaReclamoCreateComponent
+            }
             
         ]
     },
