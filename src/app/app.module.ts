@@ -10,6 +10,8 @@ import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service'
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
 
+import { PaginaprincipalModule } from "./paginaprincipal/paginaprincipal.module";
+
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
@@ -53,7 +55,9 @@ import {ClienteModule} from './cliente/cliente.module';
         ComidatipoModule,
         CalificacionModule,
         DomicilioModule, 
-        ClienteModule
+        ClienteModule,
+        NgbModule,
+        PaginaprincipalModule
 
     ],
     bootstrap: [AppComponent],

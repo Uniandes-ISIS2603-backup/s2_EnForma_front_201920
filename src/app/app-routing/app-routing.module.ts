@@ -6,6 +6,7 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 
+import {PaginaGuestComponent } from '../paginaprincipal/pagina-guest/pagina-guest.component';
 
 import {DietasListComponent} from '../dietas/dietas-list/dietas-list.component';
 import { AdministradorListComponent } from '../administrador/administrador-list/administrador-list.component';
@@ -195,12 +196,18 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: AuthLoginComponent
+        component: PaginaGuestComponent,
+        canActivate: [NgxPermissionsGuard],
+        data: {
+            permissions: {
+                only: ['GUEST']
+            }
+        } 
     },
     {
         path: '**',
         redirectTo: 'home',
-    },
+    }
 
     
     
