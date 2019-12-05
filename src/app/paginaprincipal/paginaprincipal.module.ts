@@ -8,6 +8,7 @@ import { PaginaprincipalService } from './paginaprincipal.service';
     CommonModule
   ],
   declarations: [PaginaGuestComponent],
-  providers: [PaginaprincipalService]
+  providers: [PaginaprincipalService],
+  exports:[PaginaGuestComponent]
 })
 export class PaginaprincipalModule { }

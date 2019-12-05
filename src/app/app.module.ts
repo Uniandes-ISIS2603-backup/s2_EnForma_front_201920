@@ -22,6 +22,7 @@ import {ComidatipoModule} from './comidatipo/comidatipo.module';
 import {CalificacionModule} from './calificacion/calificacion.module';
 import {DomicilioModule} from './domicilio/domicilio.module';
 import {ClienteModule} from './cliente/cliente.module';
+import { PaginaprincipalModule } from './paginaprincipal/paginaprincipal.module';
 
 
 
@@ -53,7 +54,8 @@ import {ClienteModule} from './cliente/cliente.module';
         ComidatipoModule,
         CalificacionModule,
         DomicilioModule, 
-        ClienteModule
+        ClienteModule,
+        PaginaprincipalModule
 
     ],
     bootstrap: [AppComponent],

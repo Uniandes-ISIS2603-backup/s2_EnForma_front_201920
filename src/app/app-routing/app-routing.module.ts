@@ -28,6 +28,7 @@ import {ClienteDetailComponent} from '../cliente/cliente-detail/cliente-detail.c
 import {AdministradorCreateComponent } from '../administrador/administrador-create/administrador-create.component';
 import { DomicilioDetailComponent } from '../domicilio/domicilio-detail/domicilio-detail.component';
 import { DietaCreateComponent } from '../dietas/dieta-create/dieta-create.component';
+import { PaginaGuestComponent } from '../paginaprincipal/pagina-guest/pagina-guest.component';
 
 
 CalificacionCreateComponent
@@ -175,7 +176,7 @@ const routes: Routes = [
                 canActivate: [NgxPermissionsGuard],
                 data: {
                     permissions: {
-                        only: ['CLIENT']
+                        only: ['GUEST']
                     }
                 }
             },
@@ -195,7 +196,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: AuthLoginComponent
+        component: PaginaGuestComponent
     },
     {
         path: '**',
