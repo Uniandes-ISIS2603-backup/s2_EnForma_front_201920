@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th colspan="4">Calificaciones de la dieta</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Puntaje</th>
+            <th>Cliente</th>
+            <th>Dieta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let c of calificaciones">
+            <td style="cursor: pointer">
+              <a class="figure-caption" (click)="onSelected(c.id)">{{c.id}}</a>
+              </td>
+            <td style="cursor: pointer">
+              <a class="figure-caption" (click)="onSelected(c.id)">{{c.puntaje}}</a>
+            </td>
+            <td style="cursor: pointer">
+              <a class="figure-caption" (click)="onSelected(c.id)">{{c.cliente.nombre}}</a>
+            </td>
+            <td style="cursor: pointer">
+              <a class="figure-caption" (click)="onSelected(c.id)">{{c.dieta.nombre}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <div class="border row">
+      <div class="col">
+        <div *ngIf="calificacionSelected">
+          <app-calificacion-detail [calificacion]="calificacionSelected"> </app-calificacion-detail>
+        </div>
+      </div> 
+    </div>-->
+  </div>

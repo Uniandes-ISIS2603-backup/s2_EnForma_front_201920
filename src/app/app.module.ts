@@ -25,6 +25,7 @@ import {CalificacionModule} from './calificacion/calificacion.module';
 import {DomicilioModule} from './domicilio/domicilio.module';
 import {ClienteModule} from './cliente/cliente.module';
 import { TarjetaModule } from './tarjeta/tarjeta.module';
+import {QuejaReclamoModule} from './queja-reclamo/queja-reclamo.module';
 
 
 
@@ -59,7 +60,8 @@ import { TarjetaModule } from './tarjeta/tarjeta.module';
         ClienteModule,
         NgbModule,
         PaginaprincipalModule,
-        TarjetaModule
+        TarjetaModule,
+        QuejaReclamoModule
 
     ],
     bootstrap: [AppComponent],

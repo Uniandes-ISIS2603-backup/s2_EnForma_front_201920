@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="col">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th colspan="3">Quejas y Reclamos</th>
+        </tr>
+        <tr>
+          <th>Id</th>
+          <th>Asunto</th>
+          <th>Cliente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let qr of quejasYReclamos">
+          <td style="cursor: pointer">
+            <a class="figure-caption" (click)="onSelected(qr.id)">{{qr.id}}</a>
+          </td>
+          <td style="cursor: pointer">
+            <a class="figure-caption" (click)="onSelected(qr.id)">{{qr.descripcion}}</a>
+          </td>
+          <td style="cursor: pointer">
+            <a class="figure-caption" (click)="onSelected(qr.id)">{{qr.cliente.nombre}}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+      <div *ngIf="selectedQuejaReclamo">
+              <app-queja-reclamo-detail [quejaReclamo]="selectedQuejaReclamo"></app-queja-reclamo-detail>
+      </div>  
+
+  </div>
+</div>

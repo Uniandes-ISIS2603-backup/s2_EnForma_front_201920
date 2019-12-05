@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { CalificacionService } from '../calificacion.service';
 import{Calificacion} from '../calificacion';
 import { ToastrService } from "ngx-toastr";
 import { DatePipe } from '@angular/common';
+import { DietaDetail } from '../../dietas/dieta-detail';
 
 
 @Component({
@@ -18,6 +19,12 @@ export class CalificacionCreateComponent implements OnInit
   calificacionForm: FormGroup;
   calificaciones: Calificacion[];
 
+  dietaDetail: DietaDetail;
+ 
+
+  
+  @Input() idDieta:String; 
+
   myDate:string;
   Date = new Date();
   
@@ -25,11 +32,16 @@ export class CalificacionCreateComponent implements OnInit
   constructor(private calificacionService: CalificacionService,
               private formBuilder: FormBuilder, private toastr: ToastrService, private datePipe: DatePipe) 
   { 
+    let idc =localStorage.getItem('id');
+    
+    console.log(idc); console.log(this.idDieta);
     this.calificacionForm = this.formBuilder.group(
       {
         puntaje: ["", [Validators.required, Validators.maxLength(1)]],
         comentario:[""],
-        fecha: ["", [Validators.required,Validators.minLength(19), Validators.maxLength(19) ]]
+        fecha: ["", [Validators.required,Validators.minLength(19), Validators.maxLength(19) ]],
+        cliente: [idc, [Validators.required, Validators.minLength(1)]],
+        dieta: [this.idDieta, [Validators.required, Validators.minLength(1)]]
         
       });
       

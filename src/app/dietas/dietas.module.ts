@@ -5,13 +5,16 @@ import { DietaService } from './dieta.service';
 import { FormsModule } from '@angular/forms';
 import { DietaCreateComponent } from './dieta-create/dieta-create.component';
 import { DietaDetailComponent } from './dieta-detail/dieta-detail.component';
+import { CalificacionModule } from '../calificacion/calificacion.module';
+import { CalificacionesdietaListComponent } from './calificacionesdieta-list/calificacionesdieta-list.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    CalificacionModule
   ],
-  declarations: [DietasListComponent, DietaDetailComponent, DietaCreateComponent],
+  declarations: [DietasListComponent, DietaDetailComponent, DietaCreateComponent, CalificacionesdietaListComponent],
   exports: [DietasListComponent, DietaCreateComponent],
   providers: [DietaService]
 })

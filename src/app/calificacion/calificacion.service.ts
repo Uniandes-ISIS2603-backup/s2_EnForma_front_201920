@@ -24,5 +24,6 @@ export class CalificacionService {
   createCalificacion(calificacion: Calificacion): Observable<Calificacion> {
     return this.http.post<Calificacion>(API_URL + calificaciones, calificacion);
   }
+  
 
 }

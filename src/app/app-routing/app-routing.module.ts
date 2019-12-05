@@ -13,6 +13,7 @@ import { AdministradorListComponent } from '../administrador/administrador-list/
 import { AdministradorDetailComponent } from '../administrador/administrador-detail/administrador-detail.component';
 
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
+import { PagoCreateComponent } from '../pago/pago-create/pago-create.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
 import { ComidatipoDetailComponent } from '../comidatipo/comidatipo-detail/comidatipo-detail.component';
 import { ComidatipoCreateComponent } from '../comidatipo/comidatipo-create/comidatipo-create.component';
@@ -33,9 +34,12 @@ import { DietaCreateComponent } from '../dietas/dieta-create/dieta-create.compon
 import { TarjetaListComponent } from '../tarjeta/tarjeta-list/tarjeta-list.component';
 import { TarjetaDetailComponent } from '../tarjeta/tarjeta-detail/tarjeta-detail.component';
 import { TarjetaCreateComponent } from '../tarjeta/tarjeta-create/tarjeta-create.component';
+import { QuejaReclamoDetailComponent } from '../queja-reclamo/queja-reclamo-detail/queja-reclamo-detail.component';
+import { QuejaReclamoListComponent } from '../queja-reclamo/queja-reclamo-list/queja-reclamo-list.component';
+import { QuejaReclamoCreateComponent } from '../queja-reclamo/queja-reclamo-create/queja-reclamo-create.component';
 
 
-CalificacionCreateComponent
+
 
 
 const routes: Routes = [
@@ -88,6 +92,10 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: PagoListComponent
+            },
+            {
+                path: 'create',
+                component: PagoCreateComponent
             }
             
         ]
@@ -187,6 +195,25 @@ const routes: Routes = [
                 path: 'create',
                 component:  TarjetaCreateComponent
             },
+            
+        ]
+    },
+    {
+        path: 'quejasyreclamos',
+        children: [
+            {
+                path: 'list',
+                component: QuejaReclamoListComponent,
+            },
+            {
+                path: ':id', 
+                component: QuejaReclamoDetailComponent,
+                outlet: 'detail'
+            },
+            {
+                path: 'create',
+                component:QuejaReclamoCreateComponent
+            }
             
         ]
     },
