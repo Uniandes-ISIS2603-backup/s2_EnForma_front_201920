@@ -21,7 +21,11 @@
           </div>
         </div>
   
-
+        <div class="col">
+            <div *ngIf="selectedDieta3">
+                <app-calificacionesdieta-list [dieta]="selectedDieta3"></app-calificacionesdieta-list>
+    
+        </div>
 
         <div class='col'>
             <div *ngIf="selectedDieta">
@@ -35,11 +39,7 @@
     
         </div>
 
-        <div class="col">
-            <div *ngIf="selectedDieta3">
-                <app-calificacionesdieta-list [idDieta]="selectedDieta3"></app-calificacionesdieta-list>
-    
-        </div>
+        
 
         </div>
       

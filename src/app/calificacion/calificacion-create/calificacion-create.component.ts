@@ -40,8 +40,10 @@ export class CalificacionCreateComponent implements OnInit
         puntaje: ["", [Validators.required, Validators.maxLength(1)]],
         comentario:[""],
         fecha: ["", [Validators.required,Validators.minLength(19), Validators.maxLength(19) ]],
-        cliente: [idc, [Validators.required, Validators.minLength(1)]],
-        dieta: [this.idDieta, [Validators.required, Validators.minLength(1)]]
+        cliente: ["", [Validators.required, Validators.minLength(1)]],
+        dieta: ["", [Validators.required, Validators.minLength(1)]]
+        //cliente: [idc, [Validators.required, Validators.minLength(1)]],
+        //dieta: [this.idDieta, [Validators.required, Validators.minLength(1)]]
         
       });
       
