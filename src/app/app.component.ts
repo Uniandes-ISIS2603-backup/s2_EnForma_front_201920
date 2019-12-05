@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
      */
     title: string;
 
-    show: Boolean = true;
+    show: boolean = true;
 
     
 
