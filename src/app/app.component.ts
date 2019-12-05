@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
      */
     title: string;
 
-    show: Boolean = true;
+    show: boolean = true;
 
     
 
@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         this.title = "s2_enforma-Front";
         this.authService.start();
-        document.getElementById("rol").innerHTML = localStorage.getItem('role');
     }
 
        /**
@@ -37,6 +36,7 @@ export class AppComponent implements OnInit {
     logout(): void {
         this.authService.logout()
     }
+    
 
 }
 

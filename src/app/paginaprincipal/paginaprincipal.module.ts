@@ -10,6 +10,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   exports : [PaginaGuestComponent],
   declarations: [PaginaGuestComponent],
-  providers: [PaginaprincipalService]
+  providers: [PaginaprincipalService],
+  exports:[PaginaGuestComponent]
 })
 export class PaginaprincipalModule { }

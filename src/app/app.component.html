@@ -96,8 +96,8 @@
                 Tarjeta Prepago
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Crear</a>
-                <a class="dropdown-item" href="#">Listar</a>
+                <a class="dropdown-item" routerLink="tarjeta/create" routerLinkActive="active">Crear</a>
+                <a class="dropdown-item" routerLink="tarjeta/list" routerLinkActive="active">Listar</a>
               </div>
             </li>
         </ul>
@@ -110,7 +110,7 @@
                     <button type = "button" class = "btn btn-info"> Ingresa </button>
                   </a>
                  
-                  <a href = "">
+                  <a routerLink="auth/:sign-up" routerLinkActive="active">
                     <button type = "button" class = "btn btn-success">
                       ¡Registrate!
                     </button>
@@ -124,7 +124,7 @@
                 <ul>
                  
                   <a href = "">
-                    <button type = "button" class = "btn btn-danger">
+                    <button onclick="logout()" type = "button" class = "btn btn-danger">
                       Cerrar Sesión
                     </button>
                   </a>

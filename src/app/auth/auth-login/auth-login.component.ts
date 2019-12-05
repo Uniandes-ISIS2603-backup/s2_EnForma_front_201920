@@ -33,7 +33,7 @@ export class AuthLoginComponent implements OnInit {
 
     user: User;
 
-    roles: String[];
+    roles: string[];
 
     clienteDetail: ClienteDetail;
 

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col">
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th>Tarjeta Prepago id</th>
+            <th>Saldo</th>
+            <th>Puntos</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let t of tarjetas">
+						<td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(t.id)">{{t.id}}</a>
+						</td>
+            <td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(t.id)">{{t.saldo}}</a>
+						</td>
+            <td style="cursor: pointer;">
+							<a class="figure-caption" (click)="onSelected(t.id)">{{t.puntos}}</a>
+						</td>          
+					</tr>
+				</tbody>
+			</table>
+		</div>
+    <div class='col'>
+			<div *ngIf="selectedTarjeta">
+				<app-tarjeta-detail [tarjetaDetail]="selectedTarjeta"></app-tarjeta-detail>
+	  
+		</div>
+	</div>
+</div>
