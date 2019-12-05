@@ -1,0 +1,44 @@
+
+<div class="row">
+    
+  
+  <div class="col-3"></div>
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Realizar pago
+        </h2>
+        <br>
+        <form name="pago" (ngSubmit)="f.form.valid && createPago()" #f="ngForm" novalidate>
+          
+          <div class="form-group">
+                <label for="pagoMonto"><b>Monto</b></label>
+                <input type="text" name="country" value={{pago.monto}} readonly>
+            </div> 
+
+           <div class="form-group">
+                <label for="pagoMonto"><b>ID del Domicilio</b></label>
+                <input type="text" name="country" value={{pago.orden}} readonly>
+            </div>  
+           
+           <div class="form-group">
+                    <label for="dietaAdministrador"><b>Medio de pago</b></label>
+                    <select class="custom-select" name="medioPago" required>
+        
+                        <option>Tarjeta Prepago</option>
+                        <option>Otro medio</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        <div>Debe seleccionar un medio de pago</div>
+                   </div>
+                </div>
+
+             <div class="row form-inline justify-content-center align-self-center">
+                  <button type="submit" class="btn btn-primary">Registrar</button>
+                  <div class="divider"></div>
+              </div>   
+
+        </form>
+      
+    </div>
+</div>
+

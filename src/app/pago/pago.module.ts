@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagoListComponent } from './pago-list/pago-list.component';
+import { PagoCreateComponent } from './pago-create/pago-create.component';
+import { FormsModule } from '@angular/forms';
 import { PagoService } from './pago.service';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
-  declarations: [PagoListComponent],
+  declarations: [PagoListComponent, PagoCreateComponent],
   providers: [PagoService],
-  exports: [PagoListComponent]
+  exports: [PagoListComponent, PagoCreateComponent]
 })
 export class PagoModule { }

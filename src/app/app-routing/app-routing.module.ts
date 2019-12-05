@@ -12,6 +12,7 @@ import { AdministradorListComponent } from '../administrador/administrador-list/
 import { AdministradorDetailComponent } from '../administrador/administrador-detail/administrador-detail.component';
 
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
+import { PagoCreateComponent } from '../pago/pago-create/pago-create.component';
 import { ComidatipoListComponent } from '../comidatipo/comidatipo-list/comidatipo-list.component';
 import { ComidatipoDetailComponent } from '../comidatipo/comidatipo-detail/comidatipo-detail.component';
 import { ComidatipoCreateComponent } from '../comidatipo/comidatipo-create/comidatipo-create.component';
@@ -90,6 +91,10 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: PagoListComponent
+            },
+            {
+                path: 'create',
+                component: PagoCreateComponent
             }
             
         ]
