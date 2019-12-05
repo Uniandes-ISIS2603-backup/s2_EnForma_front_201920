@@ -26,7 +26,7 @@ export class PaginaGuestComponent implements OnInit {
 
   rutaImagenesCarouselGuest: String[];
 
-  numerosAleatorios: string[] =["../../assets/comidaimagenes/comidaDetail-37.jpg","../../assets/comidaimagenes/comidaDetail-38.jpg","../../assets/comidaimagenes/comidaDetail-100.jpg","../../assets/comidaimagenes/comidaDetail-200.jpg", "../../assets/comidaimagenes/comidaDetail-300.jpg","../../assets/comidaimagenes/comidaDetail-400.jpg"] ;
+  numerosAleatorios: string[] =["../../assets/comidaimagenes/comidaDetail-37.jpg","../../assets/comidaimagenes/comidaDetail-38.jpg","../../assets/comidaimagenes/comidaDetail-100.jpg","../../assets/comidaimagenes/comidaDetail-200.jpg", "../../assets/comidaimagenes/comidaDetail-300.jpg","../../assets/comidaimagenes/comidaDetail-500.jpeg"] ;
 
   rutaImagen1:String;
 

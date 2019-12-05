@@ -253,6 +253,18 @@ const routes: Routes = [
     },
     {
         path: 'home',
+        children: [
+            {
+                path: 'cliente/create',
+                component: ClienteCreateComponent,
+                canActivate: [NgxPermissionsGuard],
+                data: {
+                    permissions: {
+                        only: ['GUEST']
+                    }
+                }
+            }
+        ],
         component: PaginaGuestComponent,
         canActivate: [NgxPermissionsGuard],
         data: {
