@@ -29,7 +29,7 @@ import {ClienteDetailComponent} from '../cliente/cliente-detail/cliente-detail.c
 import {AdministradorCreateComponent } from '../administrador/administrador-create/administrador-create.component';
 import { DomicilioDetailComponent } from '../domicilio/domicilio-detail/domicilio-detail.component';
 import { DietaCreateComponent } from '../dietas/dieta-create/dieta-create.component';
-import { PaginaGuestComponent } from '../paginaprincipal/pagina-guest/pagina-guest.component';
+
 import { TarjetaListComponent } from '../tarjeta/tarjeta-list/tarjeta-list.component';
 import { TarjetaDetailComponent } from '../tarjeta/tarjeta-detail/tarjeta-detail.component';
 import { TarjetaCreateComponent } from '../tarjeta/tarjeta-create/tarjeta-create.component';

@@ -24,7 +24,6 @@ import {ComidatipoModule} from './comidatipo/comidatipo.module';
 import {CalificacionModule} from './calificacion/calificacion.module';
 import {DomicilioModule} from './domicilio/domicilio.module';
 import {ClienteModule} from './cliente/cliente.module';
-import { PaginaprincipalModule } from './paginaprincipal/paginaprincipal.module';
 import { TarjetaModule } from './tarjeta/tarjeta.module';
 
 
