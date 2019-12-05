@@ -10,6 +10,8 @@ import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service'
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
 
+import { PaginaprincipalModule } from "./paginaprincipal/paginaprincipal.module";
+
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
@@ -22,7 +24,6 @@ import {ComidatipoModule} from './comidatipo/comidatipo.module';
 import {CalificacionModule} from './calificacion/calificacion.module';
 import {DomicilioModule} from './domicilio/domicilio.module';
 import {ClienteModule} from './cliente/cliente.module';
-import { PaginaprincipalModule } from './paginaprincipal/paginaprincipal.module';
 import { TarjetaModule } from './tarjeta/tarjeta.module';
 import {QuejaReclamoModule} from './queja-reclamo/queja-reclamo.module';
 
@@ -57,6 +58,7 @@ import {QuejaReclamoModule} from './queja-reclamo/queja-reclamo.module';
         CalificacionModule,
         DomicilioModule, 
         ClienteModule,
+        NgbModule,
         PaginaprincipalModule,
         TarjetaModule,
         QuejaReclamoModule
