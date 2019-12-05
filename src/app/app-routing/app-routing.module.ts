@@ -175,7 +175,7 @@ const routes: Routes = [
                 canActivate: [NgxPermissionsGuard],
                 data: {
                     permissions: {
-                        only: ['GUEST']
+                        only: ['CLIENT']
                     }
                 }
             },
