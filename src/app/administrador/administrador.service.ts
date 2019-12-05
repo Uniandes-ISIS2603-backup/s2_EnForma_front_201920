@@ -27,6 +27,10 @@ export class AdministradorService {
      return this.http.get<AdministradorDetail>(API_URL+administradores+"/"+administradorId)
     }
 
+    getAdministradorDetailByUsername(administradorUsername): Observable<AdministradorDetail> {
+      return this.http.get<AdministradorDetail>(API_URL+administradores+"/"+administradorUsername)
+     }
+
     createAdministrador(administrador: Administrador): Observable<Administrador> {
     return this.http.post<Administrador>(API_URL+administradores, administrador, this.httpOptions).pipe(tap((administrador: Administrador) => console.log(`added administrador w/ ${administrador.nombre} id=${administrador.id}`)));
   }

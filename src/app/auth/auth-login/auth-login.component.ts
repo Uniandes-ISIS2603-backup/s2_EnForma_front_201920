@@ -9,6 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ClienteService } from '../../cliente/cliente.service';
 import { AdministradorService } from '../../administrador/administrador.service';
 import { ClienteDetail } from '../../cliente/cliente-detail';
+import { AdministradorDetail } from '../../administrador/administrador-detail';
 
 @Component({
     selector: 'app-auth-login',
@@ -36,6 +37,8 @@ export class AuthLoginComponent implements OnInit {
 
     clienteDetail: ClienteDetail;
 
+    adminDetail: AdministradorDetail;
+
 
     /**
     * Logs the user in with the selected role
@@ -44,12 +47,19 @@ export class AuthLoginComponent implements OnInit {
        
         this.printName ();
 
-        this.clienteService.getClienteUsername(this.user.name)
-          .subscribe(clienteDetail => {
-            this.clienteDetail = clienteDetail
+        
+        
+        
 
             if(this.user.role === 'Client')
             { 
+                
+                this.clienteService.getClienteUsername(this.user.name)
+                .subscribe(clienteDetail => {
+                    this.clienteDetail = clienteDetail
+                
+                
+                
                 if(this.user.password === this.clienteDetail.contrasenia)
                 {
                     
@@ -62,10 +72,39 @@ export class AuthLoginComponent implements OnInit {
                 {
                     this.toastrService.error('No coincide')
                 }
+            
+            });
+            
             }
             
 
-          });
+          
+
+            if(this.user.role === 'Administrator')
+            { 
+
+                this.adminService.getAdministradorDetailByUsername(this.user.name)
+                .subscribe(adminDetail => {
+                this.adminDetail = adminDetail
+
+                if(this.user.password === this.adminDetail.contrasena)
+                {
+                    
+                    this.authService.login(this.user.role);
+                    this.toastrService.success('Logged in')
+                    localStorage.setItem('id', adminDetail.id.toString());
+                    console.log(localStorage.getItem('id'));
+                }
+                else
+                {
+                    this.toastrService.error('No coincide')
+                }
+
+            });
+            }
+            
+
+          
 
       
     }
