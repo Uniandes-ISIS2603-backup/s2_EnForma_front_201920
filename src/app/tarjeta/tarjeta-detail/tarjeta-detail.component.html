@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col">
+      <p> Pagos de la tarjeta prepago con id: {{tarjetaDetail.id}} </p>
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th>Pago id</th>
+            <th>Monto</th>
+            <th>EsPrepago</th>
+            <th>EstadoPago</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let t of tarjetaDetail.pagos">
+						<td >
+							{{t.id}}
+						</td>
+            <td >
+							 {{t.monto}}
+						</td>
+            <td >
+							{{t.esPrepago}}
+						</td>       
+            <td >
+							{{t.estadoPago}}
+						</td>    
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>

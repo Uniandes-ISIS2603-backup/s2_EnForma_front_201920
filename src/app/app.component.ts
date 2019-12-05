@@ -14,7 +14,11 @@ export class AppComponent implements OnInit {
     /**
      * The title that appears on the NavBar and the web browser
      */
-    title: String;
+    title: string;
+
+    show: boolean = true;
+
+    
 
     /**
      * Assigns a title to the web page
@@ -32,6 +36,7 @@ export class AppComponent implements OnInit {
     logout(): void {
         this.authService.logout()
     }
+    
 
 }
 

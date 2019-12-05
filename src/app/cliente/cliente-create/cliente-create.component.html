@@ -1,87 +1,87 @@
- <form [formGroup]="clienteForm" (ngSubmit)="createCliente(clienteForm.value)" >
- 
-  <div class='col'>
-    <h2>Registro Usuario</h2>
- <div class="form-group mx-sm-3 mb-2">
-    
-    
-    <label for="nombre">
-      Nombre
-    </label>
-    <input novalidate
-      id="nombre"
-      class="form-control"
-      formControlName="nombre"
-      placeholder="Nombre completo">
-   </div>
+<div class="row">
+  
+    <div class="col-3"></div>
+      <div class="col-6">
+          <br>
+        <h2 class="text-center">Registrar Cliente</h2>
+        <br>
+        <form name="cliente" (ngSubmit)="f.form.valid && createCliente()" #f="ngForm" novalidate>
+            
+            <div class="form-group">
+                  <label for="clienteNombre"><b>Nombre</b></label>
+                  <input type="text" name="clienteNombre" class="form-control" id="clienteNombre" [(ngModel)]="cliente.nombre"
+                  #nombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nombre.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>Name is missing</div>
+                 </div>
+              </div> 
+              
+              
+              <div class="form-group">
+                  <label for="clienteUsername"><b>Username</b></label>
+                  <input type="text" name="clienteUsername" class="form-control" id="clienteUsername" [(ngModel)]="cliente.userName"
+                  #userName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userName.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>Username is missing</div>
+                 </div>
+              </div>
+              
+              <div class="form-group">
+                  <label for="clienteContrasenia"><b>Contraseña</b></label>
+                  <input type="password" name="clienteContrasenia" class="form-control" id="clienteContrasenia" [(ngModel)]="cliente.contrasenia"
+                  #contrasenia="ngModel"  [ngClass]="{ 'is-invalid': f.submitted && contrasenia.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>Password is missing</div>
+                 </div>
+              </div>  
+  
+              <div class="form-group">
+                  <label for="clienteObjetivos"><b>Objetivos</b></label>
+                  <input type="text" name="clienteObjetivos" class="form-control" id="clienteObjetivos" [(ngModel)]="cliente.objetivos"
+                  #objetivos="ngModel" [ngClass]="{ 'is-invalid': f.submitted && objetivos.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>Objetives are missing</div>
+                 </div>
+              </div> 
 
-    <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="clienteForm.get('nombre').hasError('required') && 
-      clienteForm.get('nombre').touched">
-      Nombre required
-</div>
+              <div class="form-group">
+                  <label for="clienteEdad"><b>Edad</b></label>
+                  <input type="number" name="clienteEdad" class="form-control" id="clienteEdad" [(ngModel)]="cliente.edad"
+                  #edad="ngModel" [ngClass]="{ 'is-invalid': f.submitted && edad.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>Age is missing</div>
+                 </div>
+              </div> 
 
+              <div class="form-group">
+                  <label for="clienteGluten"><b>¿Intolerancia al Gluten? (true/false)</b></label>
+                  <input type="text" name="clienteGluten" class="form-control" id="clienteGluten" [(ngModel)]="cliente.gluten"
+                  #gluten="ngModel" [ngClass]="{ 'is-invalid': f.submitted && gluten.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div> Gluten is missing</div>
+                 </div>
+              </div>
 
-   <div class="form-group  mx-sm-3 mb-2">
-    <label for="usuario">
-      Usuario
-    </label>
-   <input id="username" type="text"
-     class="form-control"
-     formControlName="username"
-     placeholder="Tu Usuario">
-  </div>
+              <div class="form-group">
+                  <label for="clienteLactosa"><b>¿Intolerancia a la Lactosa? (true/false)</b></label>
+                  <input type="text" name="clienteLactosa" class="form-control" id="clienteLactosa" [(ngModel)]="cliente.lactosa"
+                  #lactosa="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lactosa.invalid }" required>
+                  <div class="invalid-feedback">
+                      <div>The dietas's Contiene Lactosa is missing</div>
+                 </div>
+              </div>
+  
 
-   <div class="form-group  mx-sm-3 mb-2">
-    <label for="contrasena">
-      Contraseña
-    </label>
-   <input id="contrasena" type="password"
-     class="form-control"
-     formControlName="contrasena"
-     placeholder="Tu contrasenia">
-  </div>
-
-   <div class="form-group  mx-sm-3 mb-2">
-    <label for="objetivos">
-      Objetivos
-    </label>
-   <input id="objetivos" type="text"
-     class="form-control"
-     formControlName="objetivos"
-     placeholder="Tus objetivos">
-  </div>
-
-   <div class="form-group  mx-sm-3 mb-2">
-    <label for="edad">
-      Edad
-    </label>
-   <input id="edad" type="number"
-     class="form-control"
-     formControlName="edad"
-     placeholder="Tu edad">
-  </div>
-
-  <div class="form-group  mx-sm-3 mb-2">
-      <label for="lactosa">
-        ¿Intolerante a la lactosa? (True/False)
-      </label>
-     <input id="edad" type="text"
-       class="form-control"
-       formControlName="lactosa"
-       placeholder="Intolerancias">
-    </div>
-
-    <div class="form-group  mx-sm-3 mb-2">
-        <label for="gluten">
-          ¿Intolerante al gluten? (True/False)
-        </label>
-       <input id="gluten" type="text"
-         class="form-control"
-         formControlName="gluten"
-         placeholder="Intolerancias">
+              <div class="row form-inline justify-content-center align-self-center">
+                  <button type="submit" class="btn btn-primary">Registrar</button>
+                  <div class="divider"></div>
+                  <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancelar</button>
+              </div>
+               
+  
+            </form>
       </div>
-
-  </div>
-  <button type="button" class="btn btn-success" (click) = "createCliente">Registrar</button>
-</form>
+ 
+    <div class="col-3"></div>
+  
+ 

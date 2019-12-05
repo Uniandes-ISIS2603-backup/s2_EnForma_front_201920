@@ -3,7 +3,7 @@ export class Cliente {
 
 id:number;
 nombre: string;
-username: string;
+userName: string;
 contrasenia: string;
 objetivos : string;
 edad : number;

@@ -18,6 +18,7 @@ export class AuthService {
     constructor (private router: Router, private roleService: NgxRolesService, private permissionsService: NgxPermissionsService) { }
 
     start (): void {
+        localStorage.clear();
         this.permissionsService.flushPermissions();
         this.roleService.flushRoles();
         this.permissionsService.loadPermissions(['edit_author_permission', 'delete_author_permission', 'leave_review']);
@@ -75,4 +76,6 @@ export class AuthService {
         localStorage.removeItem('role');
         this.router.navigateByUrl('/');
     }
+
+    
 }
