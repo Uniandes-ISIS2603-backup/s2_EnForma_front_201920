@@ -29,6 +29,9 @@ import {AdministradorCreateComponent } from '../administrador/administrador-crea
 import { DomicilioDetailComponent } from '../domicilio/domicilio-detail/domicilio-detail.component';
 import { DietaCreateComponent } from '../dietas/dieta-create/dieta-create.component';
 import { PaginaGuestComponent } from '../paginaprincipal/pagina-guest/pagina-guest.component';
+import { TarjetaListComponent } from '../tarjeta/tarjeta-list/tarjeta-list.component';
+import { TarjetaDetailComponent } from '../tarjeta/tarjeta-detail/tarjeta-detail.component';
+import { TarjetaCreateComponent } from '../tarjeta/tarjeta-create/tarjeta-create.component';
 
 
 CalificacionCreateComponent
@@ -162,6 +165,26 @@ const routes: Routes = [
             {
                 path: 'create',
                 component: ClienteCreateComponent
+            },
+            
+        ]
+    },
+
+    {
+        path: 'tarjeta',
+        children: [
+            
+            {
+                path: 'list',
+                component: TarjetaListComponent
+            },
+            {
+                path: 'id',
+                component:  TarjetaDetailComponent
+            },
+            {
+                path: 'create',
+                component:  TarjetaCreateComponent
             },
             
         ]

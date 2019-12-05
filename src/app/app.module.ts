@@ -23,6 +23,7 @@ import {CalificacionModule} from './calificacion/calificacion.module';
 import {DomicilioModule} from './domicilio/domicilio.module';
 import {ClienteModule} from './cliente/cliente.module';
 import { PaginaprincipalModule } from './paginaprincipal/paginaprincipal.module';
+import { TarjetaModule } from './tarjeta/tarjeta.module';
 
 
 
@@ -55,7 +56,8 @@ import { PaginaprincipalModule } from './paginaprincipal/paginaprincipal.module'
         CalificacionModule,
         DomicilioModule, 
         ClienteModule,
-        PaginaprincipalModule
+        PaginaprincipalModule,
+        TarjetaModule
 
     ],
     bootstrap: [AppComponent],
