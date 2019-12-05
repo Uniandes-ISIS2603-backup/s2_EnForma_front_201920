@@ -1,8 +1,8 @@
 
 import {Domicilio} from "./domicilio";
-//import {QuejasYReclamos} from '../quejasYReclamos/quejasYReclamos';
+import { QuejaReclamo } from "../queja-reclamo/queja-reclamo";
 
 export class DomicilioDetail extends Domicilio{
 
-  //quejasYReclamos: QuejasYReclamos;
+  quejasYReclamos: QuejaReclamo;
 }

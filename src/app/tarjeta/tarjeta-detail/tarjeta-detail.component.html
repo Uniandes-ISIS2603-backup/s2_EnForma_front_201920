@@ -14,16 +14,16 @@
 				<tbody>
 					<tr *ngFor="let t of tarjetaDetail.pagos">
 						<td >
-							{{t.id}}
+							<div *ngIf = "t?.id!=null">{{t.id}}</div>	
 						</td>
             <td >
-							 {{t.monto}}
+							<div *ngIf = "t?.monto!=null">{{t.monto}}</div>
 						</td>
             <td >
-							{{t.esPrepago}}
+							<div *ngIf = "t?.esPrepago!=null">{{t.esPrepago}}</div>
 						</td>       
             <td >
-							{{t.estadoPago}}
+							<div *ngIf = "t?.estadoPago!=null">{{t.estadoPago}}</div>
 						</td>    
 					</tr>
 				</tbody>
