@@ -23,7 +23,7 @@ export class DietasListComponent implements OnInit {
     dieta_id: number;
     selectedDieta : Dieta;
     selectedDieta2 : String;
-    selectedDieta3 : number;
+    selectedDieta3 : DietaDetail;
 
     
     onSelected(dieta_id: number):void {
@@ -40,8 +40,9 @@ export class DietasListComponent implements OnInit {
   }
 
   onSelected3(dieta_id: number):void {
-    this.selectedDieta3 = dieta_id;
-    console.log(this.selectedDieta3)
+    this.dieta_id = dieta_id;
+        this.selectedDieta3 = new DietaDetail();
+        this.geDietaDetail();
    
 }
       geDietaDetail(): void {

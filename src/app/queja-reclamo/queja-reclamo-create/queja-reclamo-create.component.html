@@ -1,3 +1,41 @@
-<p>
-queja-reclamo-create works!
-</p>
+<form [formGroup]="quejaReclamoForm" (ngSubmit)="createQuejaReclamo(quejaReclamoForm.value)">
+
+    
+    <div class="form-group">
+        <label class="font-weight-bold" for="asunto">
+          Asunto:
+         </label>
+        <input novalidate id="asunto" class="form-control" formControlName="asunto"  placeholder="Asunto">
+    </div>
+      <div class="form-group">
+          <label class="font-weight-bold" for="cliente">
+            Cliente:
+           </label>
+          <input novalidate id="cliente" class="form-control" formControlName="cliente"  placeholder="id cliente">
+      </div>
+      <div class="form-group">
+          <label class="font-weight-bold" for="domicilio">
+            Domicilio:
+           </label>
+          <input novalidate id="domicilio" class="form-control" formControlName="domicilio"  placeholder="id domicilio">
+      </div>
+      <div class="form-group">
+          <label class="font-weight-bold" for="descripcion">
+            Descripcion:
+           </label>
+          <input novalidate id="descripcion" class="form-control" formControlName="descripcion"  placeholder="Descripcion">
+      </div>
+      <div class="form-group ">
+        <label class="font-weight-bold" for="fecha">
+            Fecha:
+        </label>
+        <!-- <label for="fecha" class="sr-only">Fecha</label> -->
+        <!-- <input type="text" readonly class="form-control-plaintext" id="fecha " formControlName = "fecha" value={{myDate}}> -->
+        <input novalidate id="fecha" class="form-control" formControlName="fecha" placeholder="Fecha actual con el formato 2019-10-10T05:00:00Z[UTC]">
+        <!-- <div class="alert alert-danger alert-dismissible fade show"
+          *ngIf="calificacionForm.get('fecha').hasError('required') && editorialForm.get('fecha').touched">
+          Fecha requerida
+        </div> -->
+      </div>
+      <button class="button" type="submit" >Create</button>
+    </form>

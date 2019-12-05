@@ -6,10 +6,11 @@ import { QuejaReclamoService } from './queja-reclamo.service';
 import { QuejaReclamoDetailComponent } from './queja-reclamo-detail/queja-reclamo-detail.component';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { QuejaReclamoCreateComponent } from './queja-reclamo-create/queja-reclamo-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule, HttpClientModule, AppRoutingModule
+    CommonModule, HttpClientModule, AppRoutingModule, ReactiveFormsModule
   ],
   declarations: [QuejaReclamoListComponent, QuejaReclamoDetailComponent, QuejaReclamoCreateComponent],
   exports: [QuejaReclamoListComponent],

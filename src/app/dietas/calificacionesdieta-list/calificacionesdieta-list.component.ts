@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DietaService } from '../dieta.service';
 import { Calificacion } from '../../calificacion/calificacion';
+import { DietaDetail } from '../dieta-detail';
 
 @Component({
   selector: 'app-calificacionesdieta-list',
@@ -13,7 +14,7 @@ export class CalificacionesdietaListComponent implements OnInit {
 
   dieta_id: number;
 
-  @Input() idDieta: number;
+  @Input() dieta: DietaDetail;
 
   constructor(private dietaService: DietaService) 
   {
@@ -21,7 +22,14 @@ export class CalificacionesdietaListComponent implements OnInit {
    }
 
    getCalificaciones(): void {
-    this.dietaService.getCalificacionesDieta(this.idDieta).subscribe(calificaciones => this.calificaciones = calificaciones);
+    this.dietaService.getCalificacionesDieta(this.dieta.id).subscribe(calificaciones => this.calificaciones = calificaciones);
+}
+
+getDietaDetail(): void {
+  this.dietaService.getDietaDetail(this.dieta_id)
+      .subscribe(dietaDetail => {
+          this.dieta = dietaDetail
+      });
 }
 
 
