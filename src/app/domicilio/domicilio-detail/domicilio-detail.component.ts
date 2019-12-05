@@ -42,6 +42,7 @@ export class DomicilioDetailComponent implements OnInit {
       });
   }
 
+  
   onLoad(params) {
 
     this.domicilio_id = parseInt(params['id']);
