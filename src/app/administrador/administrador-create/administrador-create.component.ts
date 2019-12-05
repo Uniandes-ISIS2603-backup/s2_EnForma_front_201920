@@ -13,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AdministradorCreateComponent implements OnInit {
 
-a
+
 /**
 * Constructor for the component
 * @param dp DatePipe to format the date.

@@ -23,7 +23,7 @@ export class PagoService {
   }
 
   createPago(pago: Pago): Observable<Pago> {
-    return this.http.post<Pago>(API_URL+pagos, Pago, this.httpOptions).pipe(tap((Pago: Pago) => console.log(`added Pago w/ id=${Pago.id}`)));
+    return this.http.post<Pago>(API_URL+pagos, Pago, this.httpOptions).pipe(tap((pago: Pago) => console.log(`added Pago w/ id=${pago.id}`)));
   }
 
 }

@@ -64,7 +64,7 @@ export class AuthService {
         } else {
             this.setClientRole()
         }
-        this.router.navigateByUrl('/administradores/list', { skipLocationChange: true });
+        this.router.navigateByUrl('/dietas/list', { skipLocationChange: true });
     }
 
     /**
