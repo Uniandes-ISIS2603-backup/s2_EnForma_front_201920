@@ -10,7 +10,7 @@
             <div class="form-group">
                   <label for="clienteNombre"><b>Nombre</b></label>
                   <input type="text" name="clienteNombre" class="form-control" id="clienteNombre" [(ngModel)]="cliente.nombre"
-                  #clienteNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteNombre.invalid }" required>
+                  #nombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nombre.invalid }" required>
                   <div class="invalid-feedback">
                       <div>Name is missing</div>
                  </div>
@@ -19,8 +19,8 @@
               
               <div class="form-group">
                   <label for="clienteUsername"><b>Username</b></label>
-                  <input type="text" name="clienteUsername" class="form-control" id="clienteUsername" [(ngModel)]="cliente.username"
-                  #clienteUsername="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteUsername.invalid }" required>
+                  <input type="text" name="clienteUsername" class="form-control" id="clienteUsername" [(ngModel)]="cliente.userName"
+                  #userName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userName.invalid }" required>
                   <div class="invalid-feedback">
                       <div>Username is missing</div>
                  </div>
@@ -29,7 +29,7 @@
               <div class="form-group">
                   <label for="clienteContrasenia"><b>Contraseña</b></label>
                   <input type="password" name="clienteContrasenia" class="form-control" id="clienteContrasenia" [(ngModel)]="cliente.contrasenia"
-                  #clienteContrasenia="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteContrasenia.invalid }" required>
+                  #contrasenia="ngModel"  [ngClass]="{ 'is-invalid': f.submitted && contrasenia.invalid }" required>
                   <div class="invalid-feedback">
                       <div>Password is missing</div>
                  </div>
@@ -38,7 +38,7 @@
               <div class="form-group">
                   <label for="clienteObjetivos"><b>Objetivos</b></label>
                   <input type="text" name="clienteObjetivos" class="form-control" id="clienteObjetivos" [(ngModel)]="cliente.objetivos"
-                  #clienteObjetivos="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clientaObjetivos.invalid }" required>
+                  #objetivos="ngModel" [ngClass]="{ 'is-invalid': f.submitted && objetivos.invalid }" required>
                   <div class="invalid-feedback">
                       <div>Objetives are missing</div>
                  </div>
@@ -47,7 +47,7 @@
               <div class="form-group">
                   <label for="clienteEdad"><b>Edad</b></label>
                   <input type="number" name="clienteEdad" class="form-control" id="clienteEdad" [(ngModel)]="cliente.edad"
-                  #clienteEdad="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clientaEdad.invalid }" required>
+                  #edad="ngModel" [ngClass]="{ 'is-invalid': f.submitted && edad.invalid }" required>
                   <div class="invalid-feedback">
                       <div>Age is missing</div>
                  </div>
@@ -56,7 +56,7 @@
               <div class="form-group">
                   <label for="clienteGluten"><b>¿Intolerancia al Gluten? (true/false)</b></label>
                   <input type="text" name="clienteGluten" class="form-control" id="clienteGluten" [(ngModel)]="cliente.gluten"
-                  #clienteGluten="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteGluten.invalid }" required>
+                  #gluten="ngModel" [ngClass]="{ 'is-invalid': f.submitted && gluten.invalid }" required>
                   <div class="invalid-feedback">
                       <div> Gluten is missing</div>
                  </div>
@@ -65,7 +65,7 @@
               <div class="form-group">
                   <label for="clienteLactosa"><b>¿Intolerancia a la Lactosa? (true/false)</b></label>
                   <input type="text" name="clienteLactosa" class="form-control" id="clienteLactosa" [(ngModel)]="cliente.lactosa"
-                  #clienteLactosa="ngModel" [ngClass]="{ 'is-invalid': f.submitted && clienteLactosa.invalid }" required>
+                  #lactosa="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lactosa.invalid }" required>
                   <div class="invalid-feedback">
                       <div>The dietas's Contiene Lactosa is missing</div>
                  </div>
@@ -77,7 +77,7 @@
                   <div class="divider"></div>
                   <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancelar</button>
               </div>
-              
+               
   
             </form>
       </div>

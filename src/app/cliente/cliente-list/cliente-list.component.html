@@ -1,6 +1,7 @@
 <div class="container-fluid">
 
-
+    <br>
+    <h4>Clientes</h4>
   <div class='row'>
 
   <div class='col'  *ngFor = "let c of clientes">
@@ -15,8 +16,12 @@
           </div>
         </div>
       </div>
+  </div>
+  <br>
 
-      <div class='col'>
+  <div class = "row">
+
+     <div class='col'>
         <div *ngIf="selectedCliente">
             <app-cliente-detail [clienteDetail]="selectedCliente"></app-cliente-detail>
   
