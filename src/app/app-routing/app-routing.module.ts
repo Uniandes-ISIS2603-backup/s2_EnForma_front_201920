@@ -110,6 +110,12 @@ const routes: Routes = [
             },
             {
               path : ':id',
+              children:[
+                  {
+                    path: 'domicilios/create',
+                    component: DomicilioCreateComponent
+                  }
+              ],
               component: ComidatipoDetailComponent
             },
             {
