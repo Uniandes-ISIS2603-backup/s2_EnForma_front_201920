@@ -16,12 +16,17 @@ export class AppComponent implements OnInit {
      */
     title: string;
 
+    show: Boolean = true;
+
+    
+
     /**
      * Assigns a title to the web page
      */
     ngOnInit(): void {
         this.title = "s2_enforma-Front";
         this.authService.start();
+        document.getElementById("rol").innerHTML = localStorage.getItem('role');
     }
 
        /**

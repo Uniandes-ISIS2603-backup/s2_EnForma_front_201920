@@ -4,15 +4,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       
-
+      <a class="nav-link" href="#">
+          <img id="logo" class= "navbar-center" src="../assets/logo.png" class="img-fluid" alt= "Responsive image">
+      </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            
-            <a class="nav-link" href="#">
-                <img id="logo" class= "navbar-center" src="../assets/logo.png" class="img-fluid" alt= "Responsive image">
-            </a>
-          </li>
+    
    
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,7 +104,7 @@
       </div>
 
       <div class >
-          <nav class = "right">
+          <nav class = "right" *ngIf="show">
               <ul>
                   <a routerLink="auth/login" routerLinkActive="active">
                     <button type = "button" class = "btn btn-info"> Ingresa </button>
@@ -118,9 +115,24 @@
                       ¡Registrate!
                     </button>
                   </a>
+
+                
                 </ul> 
+              </nav>
+
+              <nav class = "right" *ngIf="!show">
+                <ul>
+                 
+                  <a href = "">
+                    <button type = "button" class = "btn btn-danger">
+                      Cerrar Sesión
+                    </button>
+                  </a>
+                </ul> 
+
         </nav>
       </div>
+      
 
   </nav>
 
